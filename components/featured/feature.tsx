@@ -15,7 +15,7 @@ const FeatureSection = () => {
             }}
             className="text-transparent bg-clip-text"
           >
-            there's more
+            there&apos;s more
           </span>
         </h2>
       </div>

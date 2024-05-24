@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, FC } from "react";
-import logo from "../../assets/logo.png";
+import logo1 from "../../assets/logo1.jpg";
 import { navItems } from "../../constants";
 import Image from "next/image";
 import { neongGradient } from "@/colors/gradients";
@@ -22,13 +22,13 @@ const Navbar: FC = () => {
       <div className="container px-4 mx-auto relative lg:text-sm ">
         <div className="flex justify-between items-center ">
           <div className="flex items-center flex-shrink-0">
-            <Image
+            {/* <Image
               className="h-10 w-10 mr-2"
-              src={logo}
+              src={logo1}
               alt="Logo"
               width={40}
               height={40}
-            />
+            /> */}
             <span className="text-2xl text-bold tracking-tight">CHOOSE</span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">

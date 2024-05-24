@@ -11,9 +11,10 @@ const MetricsComponent: React.FC = () => {
     >
       <div className="flex flex-col gap-2 max-w-full md:max-w-[750px]">
         <div className="font-bold text-black text-2xl md:text-3xl">
-          "Restaurant Owners should focus only on the Top 2 Metrics - Great Food
-          and Great Service."
+          &quot;Restaurant Owners should focus only on the Top 2 Metrics - Great
+          Food and Great Service.&quot;
         </div>
+
         <div className="flex items-center space-x-2 md:space-x-5 md:mt-5">
           <img
             src="/headset.svg"
