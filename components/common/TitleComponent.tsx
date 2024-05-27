@@ -16,8 +16,12 @@ const TitleComponent: React.FC = () => {
       </div> */}
       <div className="flex flex-col gap-6 max-w-full text-center px-4 md:px-0">
         <div className="font-bold text-white text-2xl md:text-4xl max-w-xs sm:max-w-md md:max-w-6xl my-auto">
-          &quot;Built along with Restaurant Owners, Marketers, Technology
-          Experts to revolutionise the Restaurant space.&quot;
+          &quot;Built along with
+          <span className="text-transparent bg-clip-text  bg-gradient-to-r from-primary to-secondary">
+            {" "}
+            Restaurant Owners, Marketers, Technology Experts{" "}
+          </span>
+          to revolutionise the Restaurant space.&quot;
         </div>
       </div>
     </div>

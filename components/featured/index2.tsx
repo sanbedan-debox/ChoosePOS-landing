@@ -11,7 +11,7 @@ const Features = () => {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 relative w-full flex justify-end ">
         <div className="flex flex-1 lg:min-h-[900px]">
           <img
-            src="/phone.png"
+            src="/Credit.png"
             alt="phone"
             width={440}
             height={1000}
@@ -38,27 +38,10 @@ const Features = () => {
               />
             ))}
             {/* Anchor tab */}
-            <li className="flex w-full flex-1 flex-col items-center justify-center transition duration-300 ease-in-out transform hover:scale-105">
-              <a
-                href="#know-more"
-                className="flex items-center text-lg text-neutral-300"
-              >
+            <li className="flex w-full flex-1 flex-col items-center justify-center  transition duration-300 ease-in-out transform hover:scale-105">
+              <button className="inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-[#7747FF] focus:bg-gray-200 text-white text-4xl font-bold leading-loose transition duration-200">
                 Know More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
+              </button>
             </li>
           </ul>
         </div>

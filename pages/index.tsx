@@ -3,18 +3,14 @@ import { NextPage } from "next";
 import Navbar from "@/components/Navbar/navbar";
 import HeroSection from "@/components/Hero/Hero";
 import FeatureSection from "@/components/featured/feature";
-import Workflow from "@/components/Workflow";
-import Pricing from "@/components/pricing";
 import Footer from "@/components/footer";
-import Explore from "@/components/explore";
 import SecFooter from "@/components/secfooter";
-import FAQComponent from "@/components/FAQ";
 import MetricsComponent from "@/components/metrics";
 import TitleComponent from "@/components/common/TitleComponent";
-import FAQ from "@/components/FAQ/index2";
-import { faqs } from "@/constants";
-import GetStarted from "@/components/gettingStarted";
 import Featurestwo from "@/components/featured/index2";
+import FAQSectiontry from "@/components/FAQ/try";
+import Footertwo from "@/components/footer/index2";
+import { Footerthree } from "@/components/footer/index3";
 
 const Home: NextPage = () => {
   return (
@@ -37,18 +33,21 @@ const Home: NextPage = () => {
         {/* Feature Section */}
         <FeatureSection />
       </div>
+      <div className="relative">
+        <div className="gradient-03 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
+      </div>
 
       <TitleComponent />
+
       <div className="max-w-7xl mx-auto px-6 relative">
+        <FAQSectiontry />
         <SecFooter />
         {/* Secondary Footer */}
-
         {/* Divider */}
-        <div className="border-t py-10 border-neutral-700"></div>
-
+        {/* <div className="border-t py-10 border-neutral-700"></div> */}
         {/* Footer */}
-        <Footer />
       </div>
+      <Footerthree />
     </>
   );
 };

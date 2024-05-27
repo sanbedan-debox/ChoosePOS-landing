@@ -23,7 +23,7 @@ const Navbar: FC = () => {
         <div className="flex justify-between items-center ">
           <div className="flex items-center flex-shrink-0">
             <a href="#">
-              <Image className="mr-2" src={logo1} alt="Logo" width={100} />
+              <Image className="mr-2" src={logo1} alt="Logo" width={150} />
             </a>
             {/* <span className="text-2xl text-bold tracking-tight">CHOOSE</span> */}
           </div>
