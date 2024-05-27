@@ -14,6 +14,7 @@ import TitleComponent from "@/components/common/TitleComponent";
 import FAQ from "@/components/FAQ/index2";
 import { faqs } from "@/constants";
 import GetStarted from "@/components/gettingStarted";
+import Featurestwo from "@/components/featured/index2";
 
 const Home: NextPage = () => {
   return (
@@ -22,28 +23,29 @@ const Home: NextPage = () => {
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
       </div>
+
       <MetricsComponent />
-      <div className="max-w-7xl mx-auto pt-20 px-6">
+      <Featurestwo />
+      <div className="max-w-7xl mx-auto px-6">
         <div className="relative">
-          <Explore />
-          <GetStarted />
-          <div className="gradient-03 z-[-3]" />
+          {/* <Explore /> */}
+          {/* <GetStarted /> */}
+          {/* <div className="gradient-02 z-[-3]" /> */}
           <FeatureSection />
         </div>
       </div>
-      <div className="relative">
-        <div className="max-w-7xl mx-auto pt-20 px-6">
+      {/* <div className="max-w-7xl mx-auto pt-20 px-6">
           <Workflow />
           <div className="gradient-03 z-[-3]" />
-        </div>
-        <TitleComponent />
-        <div className="max-w-7xl mx-auto pt-20 px-6">
-          {/* <Pricing /> */}
-          {/* <FAQComponent /> */}
-          <FAQ faqs={faqs} />
-          <SecFooter />
-          <Footer />
-        </div>
+        </div> */}
+      <TitleComponent />
+      <div className="max-w-7xl mx-auto px-6">
+        {/* <Pricing /> */}
+        {/* <FAQComponent /> */}
+        {/* <FAQ faqs={faqs} /> */}
+        <SecFooter />
+        <div className="border-t py-10 border-neutral-700"></div>
+        <Footer />
       </div>
     </>
   );

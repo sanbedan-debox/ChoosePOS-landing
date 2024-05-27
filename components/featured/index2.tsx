@@ -4,7 +4,10 @@ import React from "react";
 
 const Features = () => {
   return (
-    <section className="flex-col items-center overflow-hidden  bg-feature-bg  bg-gray-90 bg-cover bg-center bg-no-repeat py-24">
+    <section
+      id="feat"
+      className="flex-col items-center overflow-hidden  bg-feature-bg"
+    >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 relative w-full flex justify-end">
         <div className="flex flex-1 lg:min-h-[900px]">
           <img
@@ -18,7 +21,7 @@ const Features = () => {
 
         <div className="z-20 flex w-full flex-col lg:w-[60%]">
           <div className="relative">
-            <h2 className="text-[40px] font-bold lg:text-[64px]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl lg:mt-20 tracking-wide">
               Our Features
             </h2>
           </div>
@@ -52,7 +55,7 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
           background: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
           //   color: "black",
         }}
-        className="rounded-full p-4 lg:p-7 "
+        className="rounded-full p-2 lg:p-4 "
       >
         <img
           src={icon}
@@ -62,12 +65,8 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
           style={{ filter: "invert(100%)" }}
         />
       </div>
-      <h2 className="text-[20px] font-bold lg:text-[32px] mt-5 capitalize">
-        {title}
-      </h2>
-      <p className="text-[16px] mt-5 text-gray-30 lg:mt-[30px] lg:bg-none">
-        {description}
-      </p>
+      <h2 className="text-xl font-semibold mt-1">{title}</h2>
+      <p className="text-md mt-2 text-neutral-400">{description}</p>
     </li>
   );
 };

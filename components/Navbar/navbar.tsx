@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, FC } from "react";
-import logo1 from "../../assets/logo1.jpg";
+import logo1 from "../../assets/logo/logoWhite.png";
 import { navItems } from "../../constants";
 import Image from "next/image";
 import { neongGradient } from "@/colors/gradients";
@@ -22,14 +22,8 @@ const Navbar: FC = () => {
       <div className="container px-4 mx-auto relative lg:text-sm ">
         <div className="flex justify-between items-center ">
           <div className="flex items-center flex-shrink-0">
-            {/* <Image
-              className="h-10 w-10 mr-2"
-              src={logo1}
-              alt="Logo"
-              width={40}
-              height={40}
-            /> */}
-            <span className="text-2xl text-bold tracking-tight">CHOOSE</span>
+            <Image className="mr-2" src={logo1} alt="Logo" width={100} />
+            {/* <span className="text-2xl text-bold tracking-tight">CHOOSE</span> */}
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item: NavItem, index: number) => (
@@ -41,12 +35,12 @@ const Navbar: FC = () => {
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
               href="#"
-              className="py-2 px-3 rounded-md text-black text-bold"
+              className="py-2 px-3 rounded-full text-black text-bold"
               style={{
                 backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
               }}
             >
-              Contact Us
+              Join The Waitlist
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">

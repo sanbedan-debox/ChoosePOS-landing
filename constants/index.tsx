@@ -56,10 +56,9 @@ interface ResourceLink {
 }
 
 export const navItems: NavItem[] = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Testimonials", href: "#" },
+  { label: "Features", href: "#feat" },
+  { label: "FAQ", href: "#faq" },
+  { label: "About Us", href: "#" },
 ];
 
 // export const testimonials: Testimonial[] = [
@@ -305,6 +304,20 @@ export const FEATURES = [
     variant: "green",
     description:
       "Technology uses augmented reality as a guide to your hiking trail in the forest to the top of the mountain. Already supported by the latest technology without an internet connection",
+  },
+  {
+    title: "Many new locations every month",
+    icon: "/location.svg",
+    variant: "orange",
+    description:
+      "Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing",
+  },
+  {
+    title: "Many new locations every month",
+    icon: "/location.svg",
+    variant: "orange",
+    description:
+      "Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing",
   },
   {
     title: "Many new locations every month",
