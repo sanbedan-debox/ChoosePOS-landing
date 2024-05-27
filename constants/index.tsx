@@ -8,6 +8,12 @@ import {
   GlobeLock,
 } from "lucide-react";
 
+export const startingFeatures = [
+  "Find a world that suits you and you want to enter",
+  "Enter the world by reading basmalah to be safe",
+  "No need to beat around the bush, just stay on the gas and have fun",
+];
+
 // import user1 from "../assets/profile-pictures/user1.jpg";
 // import user2 from "../assets/profile-pictures/user2.jpg";
 // import user3 from "../assets/profile-pictures/user3.jpg";

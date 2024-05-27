@@ -1,11 +1,11 @@
 import React from "react"; // Import React
 import { motion } from "framer-motion"; // Import motion from framer-motion
-import { textContainer, textVariant2 } from "../../../utils/motion"; // Import motion utilities
+import { textContainer, textVariant2 } from "../../utils/motion"; // Import motion utilities
 
 // Define props type for TypingText component
 interface TypingTextProps {
   title: string;
-  textStyles: string;
+  textStyles?: string;
 }
 
 // Define TypingText component
@@ -27,8 +27,8 @@ export const TypingText: React.FC<TypingTextProps> = ({
 
 // Define props type for TitleText component
 interface TitleTextProps {
-  title: string;
-  textStyles: string;
+  title: any;
+  textStyles?: string;
 }
 
 // Define TitleText component

@@ -11,6 +11,7 @@ const SecFooter: React.FC = () => (
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
+    viewport={{ once: true }}
     className={`${styles.xPaddings} py-8 relative`}
   >
     <div className="footer-gradient" />

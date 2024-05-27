@@ -16,12 +16,12 @@ const MetricsComponent: React.FC = () => {
         </div>
 
         <div className="flex items-center space-x-2 md:space-x-5 md:mt-5">
-          <img
+          {/* <img
             src="/headset.svg"
             alt="headset"
             className="w-[24px] h-[24px] object-contain"
             style={{ filter: "invert(90%)" }}
-          />
+          /> */}
           <div className="font-bold text-gray-900 text-lg md:text-xl max-w-full md:max-w-[500px]">
             For everything else they need to CHOOSE the right partner
           </div>

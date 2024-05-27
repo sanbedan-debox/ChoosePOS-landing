@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion";
 import styles from "../../styles";
 import { exploreWorlds } from "../../constants";
 import ExploreCard from "./components/ExploreCard"; // Correct import statement for ExploreCard
-import { TitleText, TypingText } from "./components/CustomTexts";
+import { TitleText, TypingText } from "../common/CustomTexts";
 import { staggerContainer } from "@/utils/motion";
 import { neongGradient } from "@/colors/gradients";
 
@@ -16,8 +16,9 @@ const Explore: React.FC = () => {
       <motion.div
         variants={staggerContainer(1, 3)}
         initial="hidden"
+        viewport={{ once: true }}
         whileInView="show"
-        viewport={{ once: false, amount: 0.2 }}
+        // viewport={{ once: false, amount: 0.2 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
         <div className="text-center">

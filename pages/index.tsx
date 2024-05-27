@@ -13,6 +13,7 @@ import MetricsComponent from "@/components/metrics";
 import TitleComponent from "@/components/common/TitleComponent";
 import FAQ from "@/components/FAQ/index2";
 import { faqs } from "@/constants";
+import GetStarted from "@/components/gettingStarted";
 
 const Home: NextPage = () => {
   return (
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <div className="relative">
           <Explore />
-
+          <GetStarted />
           <div className="gradient-03 z-[-3]" />
           <FeatureSection />
         </div>
