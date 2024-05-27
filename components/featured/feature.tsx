@@ -10,10 +10,10 @@ const FeatureSection = () => {
         <h2 className="text-3xl sm:text-5xl lg:text-6xl lg:mt-20 tracking-wide">
           Hold on{" "}
           <span
-            style={{
-              backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-            }}
-            className="text-transparent bg-clip-text"
+            // style={{
+            //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
+            // }}
+            className="text-transparent bg-clip-text  bg-gradient-to-r from-primary to-secondary"
           >
             there&apos;s more
           </span>
@@ -29,10 +29,10 @@ const FeatureSection = () => {
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 mb-8 ">
             <div className="flex items-start">
               <div
-                style={{
-                  background: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-                }}
-                className="flex-shrink-0 w-10 h-10 text-neutral-900 flex justify-center items-center rounded-full"
+                // style={{
+                //   background: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
+                // }}
+                className="flex-shrink-0 w-10 h-10 text-white flex justify-center items-center rounded-full  bg-gradient-to-r from-primary to-secondary"
               >
                 {feature.icon}
               </div>

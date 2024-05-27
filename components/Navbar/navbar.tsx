@@ -18,11 +18,13 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 ">
+    <nav className="sticky top-0 z-50 py-3 backdrop-blur-xl border-b border-neutral-700/80 ">
       <div className="container px-4 mx-auto relative lg:text-sm ">
         <div className="flex justify-between items-center ">
           <div className="flex items-center flex-shrink-0">
-            <Image className="mr-2" src={logo1} alt="Logo" width={100} />
+            <a href="#">
+              <Image className="mr-2" src={logo1} alt="Logo" width={100} />
+            </a>
             {/* <span className="text-2xl text-bold tracking-tight">CHOOSE</span> */}
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
@@ -35,10 +37,10 @@ const Navbar: FC = () => {
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
               href="#"
-              className="py-2 px-3 rounded-full text-black text-bold"
-              style={{
-                backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-              }}
+              className="py-2 px-3 rounded-full text-white text-bold bg-primary"
+              // style={{
+              //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
+              // }}
             >
               Join The Waitlist
             </a>

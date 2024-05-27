@@ -12,8 +12,14 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        'feature-bg': "url('/feature-bg.png') invert(100%)",
-
+      },
+      colors: {
+        primary: "#162CF1",
+        secondary: "#3b82f6",
+        accent: "#8b5cf6",
+        success: "#10b981",
+        warning: "#f59e0b",
+        error: "#ef4444",
       },
     },
   },

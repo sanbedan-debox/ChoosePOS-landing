@@ -22,29 +22,31 @@ const Home: NextPage = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto pt-20 px-6">
         <HeroSection />
+        <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
+      </div>
+      <MetricsComponent />
+      <div className="relative">
+        <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
+
+        <Featurestwo />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative">
+        {/* Gradient 01 */}
+        {/* <div className="gradient-feature absolute w-full h-[200px] top-0 right-0 z-[-2]"></div> */}
+
+        {/* Feature Section */}
+        <FeatureSection />
       </div>
 
-      <MetricsComponent />
-      <Featurestwo />
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="relative">
-          {/* <Explore /> */}
-          {/* <GetStarted /> */}
-          {/* <div className="gradient-02 z-[-3]" /> */}
-          <FeatureSection />
-        </div>
-      </div>
-      {/* <div className="max-w-7xl mx-auto pt-20 px-6">
-          <Workflow />
-          <div className="gradient-03 z-[-3]" />
-        </div> */}
       <TitleComponent />
-      <div className="max-w-7xl mx-auto px-6">
-        {/* <Pricing /> */}
-        {/* <FAQComponent /> */}
-        {/* <FAQ faqs={faqs} /> */}
+      <div className="max-w-7xl mx-auto px-6 relative">
         <SecFooter />
+        {/* Secondary Footer */}
+
+        {/* Divider */}
         <div className="border-t py-10 border-neutral-700"></div>
+
+        {/* Footer */}
         <Footer />
       </div>
     </>

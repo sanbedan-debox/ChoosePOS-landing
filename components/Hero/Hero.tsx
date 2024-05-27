@@ -3,14 +3,17 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20 lg:mb-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-6xl text-center tracking-wide">
+    <section
+      id="#"
+      className="flex flex-col items-center mt-6 lg:mt-20 lg:mb-20"
+    >
+      <h1 className="text-4xl sm:text-6xl lg:text-6xl text-center tracking-wide ">
         Revolutionising how Restaurants use
         <span
-          className="bg-gradient-to-r text-transparent bg-clip-text"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-          }}
+          className="text-transparent bg-clip-text  bg-gradient-to-r from-primary to-secondary"
+          // style={{
+          //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
+          // }}
         >
           {" "}
           Data{" "}
@@ -57,7 +60,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <div className="flex mt-10 justify-center">{/* TODO: to do */}</div>
-    </div>
+    </section>
   );
 };
 

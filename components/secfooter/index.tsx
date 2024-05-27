@@ -14,17 +14,20 @@ const SecFooter: React.FC = () => (
     viewport={{ once: true }}
     className="relative"
   >
-    {/* <div className="footer-gradient" /> */}
+    <div className="gradient-footer absolute w-full h-[100px] left-0 bottom-0"></div>
+
+    <div className="absolute min-w-screen h-[100px] left-[37%] bottom-0 bg-footer-gradient from-primary to-secondary blur-[150px]"></div>
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
-        <h4 className="text-3xl sm:text-5xl lg:text-6xl tracking-wide">
+        <h4 className="text-3xl sm:text-5xl lg:text-6xl ">
           Join the{" "}
           <span
             style={{
-              backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
+              // backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
               WebkitBackgroundClip: "text",
               color: "transparent",
             }}
+            className=" bg-gradient-to-r from-primary to-secondary "
           >
             Waitlist
           </span>
