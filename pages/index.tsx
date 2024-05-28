@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <FeatureSection />
       </div>
       <div className="relative">
-        <div className="gradient-03 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
+        <div className="gradient-03 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>
       </div>
 
       <TitleComponent />
@@ -44,10 +44,10 @@ const Home: NextPage = () => {
         <SecFooter />
         {/* Secondary Footer */}
         {/* Divider */}
-        {/* <div className="border-t py-10 border-neutral-700"></div> */}
-        {/* Footer */}
+        <div className="border-t py-2 border-neutral-700"></div>
+        <Footertwo />
       </div>
-      <Footerthree />
+      {/* <Footerthree /> */}
     </>
   );
 };

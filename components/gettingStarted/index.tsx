@@ -1,23 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "../../styles";
 import { startingFeatures } from "../../constants";
 import { fadeIn, planetVariants } from "../../utils/motion";
-import { TitleText, TypingText } from "../common/CustomTexts";
 import StartSteps from "../common/StartSteps";
 
 const GetStarted: React.FC = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section className="sm:p-16 xs:p-8 px-6 py-12 relative z-10">
     <motion.div
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
+      className="2xl:max-w-[1280px] w-full mx-auto flex lg:flex-row flex-col gap-8"
     >
       <motion.div
         variants={planetVariants("left")}
-        className={`flex-1 ${styles.flexCenter}`}
+        className="flex-1 flex justify-center items-center"
       >
         <img
           src="/ex5.jpg"

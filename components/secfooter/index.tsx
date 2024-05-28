@@ -1,9 +1,7 @@
 import React from "react"; // Import React
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
-import styles from "../../styles"; // Import styles
 import { footerVariants } from "../../utils/motion"; // Import footerVariants from motion utilities
-import { neongGradient } from "@/colors/gradients";
 
 // Define Footer component
 const SecFooter: React.FC = () => (
@@ -17,7 +15,7 @@ const SecFooter: React.FC = () => (
     <div className="gradient-footer absolute w-full h-[100px] left-0 bottom-0"></div>
 
     <div className="absolute min-w-screen h-[100px] left-[37%] bottom-0 bg-footer-gradient from-primary to-secondary blur-[150px] z-[-4]"></div>
-    <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
+    <div className="2xl:max-w-[1280px] w-full mx-auto flex flex-col gap-8">
       <div className="flex items-center justify-between flex-wrap gap-5">
         <div className="text-3xl sm:text-5xl lg:text-6xl text-white">
           Join the{" "}

@@ -52,7 +52,7 @@ const Navbar: FC = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-black w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item: NavItem, index: number) => (
                 <li key={index} className="py-4">
@@ -61,13 +61,7 @@ const Navbar: FC = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a
-                href="#"
-                style={{
-                  backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-                }}
-                className="py-2 px-3 rounded-md "
-              >
+              <a href="#" className="py-2 px-3 rounded-md  bg-primary">
                 Contact Us
               </a>
             </div>

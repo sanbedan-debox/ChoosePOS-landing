@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
-import styles from "../../styles";
 import { exploreWorlds } from "../../constants";
 import ExploreCard from "./components/ExploreCard"; // Correct import statement for ExploreCard
 import { TitleText, TypingText } from "../common/CustomTexts";
@@ -12,7 +11,7 @@ const Explore: React.FC = () => {
   const [active, setActive] = useState<string>("world-2");
 
   return (
-    <section className={`${styles.paddings}`} id="explore">
+    <section className="sm:p-16 xs:p-8 px-6 py-12" id="explore">
       <LazyMotion features={domAnimation}>
         <m.div
           variants={staggerContainer(1, 3)}
@@ -20,7 +19,7 @@ const Explore: React.FC = () => {
           viewport={{ once: true }}
           whileInView="show"
           // viewport={{ once: false, amount: 0.2 }}
-          className={`${styles.innerWidth} mx-auto flex flex-col`}
+          className="2xl:max-w-[1280px] w-full mx-auto flex flex-col"
         >
           <div className="text-center">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">

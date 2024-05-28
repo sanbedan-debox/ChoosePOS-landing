@@ -18,7 +18,7 @@ const FAQSectiontry = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="p-8 rounded-full bg-blue-100 bg-opacity-20 transition duration-3900"
+              className="p-8 rounded-lg bg-blue-100 bg-opacity-20 transition duration-3900"
             >
               <button
                 className="flex items-center justify-between w-full"

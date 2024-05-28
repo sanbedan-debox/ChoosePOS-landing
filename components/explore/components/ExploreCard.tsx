@@ -4,8 +4,6 @@ import React from "react";
 // Import necessary types from framer-motion
 import { motion } from "framer-motion";
 
-// Import styles and motion utilities
-import styles from "../../../styles";
 import { fadeIn } from "../../../utils/motion";
 
 // Define props type for ExploreCard
@@ -47,9 +45,7 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
       </h3>
     ) : (
       <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-        <div
-          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
-        >
+        <div className="flex justify-center items-center w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]">
           <img
             src="/headset.svg"
             alt="headset"
