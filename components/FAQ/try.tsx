@@ -8,23 +8,23 @@ const FAQSectiontry = () => {
   };
 
   return (
-    <section id="faq" className="mt-20">
-      <div className="container px-6  mx-auto">
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl text-center font-semibold text-white">
+    <section id="faq" className="">
+      <div className="container mx-auto">
+        <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-20 text-center font-semibold text-white">
           Frequently asked questions
         </h1>
 
-        <div className="mt-8 space-y-8 lg:mt-10">
+        <div className="space-y-8 ">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg bg-blue-100 bg-opacity-20 transition duration-3900"
+              className="p-4 rounded-lg bg-secondary bg-opacity-20 transition duration-3900"
             >
               <button
                 className="flex items-center justify-between w-full"
                 onClick={() => toggleFAQ(index)}
               >
-                <h1 className="font-semibold text-gray-700 dark:text-white">
+                <h1 className="font-semibold text-xl text-white">
                   {faq.question}
                 </h1>
 
@@ -42,27 +42,20 @@ const FAQSectiontry = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    {openIndex === index ? (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M18 12H6"
-                      />
-                    ) : (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    )}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d={
+                        openIndex === index ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"
+                      }
+                    />
                   </svg>
                 </span>
               </button>
 
               {openIndex === index && (
-                <p className="mt-6 text-sm text-gray-200 dark:text-gray-300">
+                <p className="mt-2 text-md text-gray-200 dark:text-gray-300">
                   {faq.answer}
                 </p>
               )}
