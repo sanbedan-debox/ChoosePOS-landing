@@ -23,7 +23,6 @@ const Home: NextPage = () => {
       <MetricsComponent />
       <div className="relative">
         <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
-
         <Featurestwo />
       </div>
       <div className="max-w-7xl mx-auto px-6 relative">
@@ -44,7 +43,7 @@ const Home: NextPage = () => {
         <SecFooter />
         {/* Secondary Footer */}
         {/* Divider */}
-        <div className="border-t py-2 border-neutral-700"></div>
+        <div className="border-t py-2 mt-2 border-neutral-700"></div>
         <Footertwo />
       </div>
       {/* <Footerthree /> */}

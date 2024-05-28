@@ -5,9 +5,9 @@ import { neongGradient } from "@/colors/gradients";
 
 const FeatureSection = () => {
   return (
-    <div className="relative mt-10 ">
+    <div className="relative mt-20 ">
       <div className="text-center">
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl lg:mt-20 tracking-wide">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl  font-semibold">
           Hold on{" "}
           <span
             // style={{
@@ -23,7 +23,7 @@ const FeatureSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="flex flex-wrap mt-10 lg:mt-20 mx-auto"
+        className="flex flex-wrap mt-20 lg:mt-20 mx-auto"
       >
         {features.map((feature, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 mb-8 ">

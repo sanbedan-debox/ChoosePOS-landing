@@ -8,7 +8,7 @@ const TitleComponent: React.FC = () => {
       //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
       // }}
       // className="p-6 mt-10 flex justify-center items-center space-y-4 h-64 md:h-60  bg-gradient-to-r from-primary to-secondary"
-      className="p-6 mt-10 flex justify-center items-center space-y-4 h-64 md:h-60 backdrop-blur-4xl  border-neutral-700/80 "
+      className="mt-20 px-6 flex justify-center items-center space-y-4   backdrop-blur-4xl  border-neutral-700/80 "
     >
       {/* <div className="font-bold text-black text-2xl md:text-3xl max-w-[800px] text-center">
         Built along with Restaurant Owners, Marketers, Technology Experts to

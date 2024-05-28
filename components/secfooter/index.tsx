@@ -15,9 +15,9 @@ const SecFooter: React.FC = () => (
     <div className="gradient-footer absolute w-full h-[100px] left-0 bottom-0"></div>
 
     <div className="absolute min-w-screen h-[100px] left-[37%] bottom-0 bg-footer-gradient from-primary to-secondary blur-[150px] z-[-4]"></div>
-    <div className="2xl:max-w-[1280px] w-full mx-auto flex flex-col gap-8">
+    <div className="2xl:max-w-[1280px] w-full mx-auto flex flex-col gap-8 md:mt-0 mt-10">
       <div className="flex items-center justify-between flex-wrap gap-5">
-        <div className="text-3xl sm:text-5xl lg:text-6xl text-white">
+        <div className="text-3xl sm:text-5xl lg:text-6xl text-white text">
           Join the{" "}
           <span
             style={{
@@ -31,7 +31,7 @@ const SecFooter: React.FC = () => (
           </span>
         </div>
 
-        <div className="flex justify-center my-20 w-full max-w-screen-sm">
+        <div className="flex justify-center my-0 md:my-20 w-full max-w-screen-sm">
           <div className="flex flex-col sm:flex-row w-full space-y-4 sm:space-y-0 sm:space-x-4">
             <div className="relative flex-grow">
               <label

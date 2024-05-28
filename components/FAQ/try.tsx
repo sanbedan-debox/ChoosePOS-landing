@@ -8,13 +8,13 @@ const FAQSectiontry = () => {
   };
 
   return (
-    <section id="faq" className="mb-10">
-      <div className="container px-6 py-12 mx-auto">
-        <h1 className="text-2xl text-center font-semibold text-gray-800 lg:text-3xl dark:text-white">
+    <section id="faq" className="mt-20">
+      <div className="container px-6  mx-auto">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl text-center font-semibold text-white">
           Frequently asked questions
         </h1>
 
-        <div className="mt-8 space-y-8 lg:mt-12">
+        <div className="mt-8 space-y-8 lg:mt-10">
           {faqs.map((faq, index) => (
             <div
               key={index}
