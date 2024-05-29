@@ -11,13 +11,13 @@ const Footerlast: React.FC = () => (
           </a>
         </div>
 
-        <p className="mt-4 text-2xl max-w-md text-center leading-relaxed text-white sm:text-left lg:mt-0">
+        <p className="mt-4 text-2xl max-w-xl text-center leading-relaxed text-white sm:text-left lg:mt-0">
           Built along with Restaurant Owners, Marketers, Technology Experts to
           revolutionise the Restaurant space.
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 gap-8 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-4">
+      <div className="mt-16 grid grid-cols-1 gap-8 border-t border-gray-100 pt-16 md:grid-cols-3 lg:grid-cols-3">
         <div className="text-center sm:text-left mx-auto">
           <p className="text-xl font-medium text-white">About Us</p>
 
@@ -30,21 +30,7 @@ const Footerlast: React.FC = () => (
 
             <li>
               <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Meet the Team{" "}
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                Employee Handbook
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Careers{" "}
+                Our Projects
               </a>
             </li>
           </ul>
@@ -53,10 +39,10 @@ const Footerlast: React.FC = () => (
         <div className="text-center sm:text-left mx-auto">
           <p className="text-xl font-medium text-white">Our Services</p>
 
-          <ul className="mt-8 space-y-4 text-sm">
+          <ul className="mt-8 space-y-4 text-sm text-center">
             <li>
               <a className="text-white transition hover:text-white/75" href="#">
-                Web Development
+                Features
               </a>
             </li>
 
@@ -73,59 +59,13 @@ const Footerlast: React.FC = () => (
                 Marketing{" "}
               </a>
             </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Google Ads{" "}
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="text-center sm:text-left mx-auto">
-          <p className="text-xl font-medium text-white">Resources</p>
-
-          <ul className="mt-8 space-y-4 text-sm">
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Online Guides{" "}
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                Conference Notes
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Forum{" "}
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                {" "}
-                Downloads{" "}
-              </a>
-            </li>
-
-            <li>
-              <a className="text-white transition hover:text-white/75" href="#">
-                Upcoming Events
-              </a>
-            </li>
           </ul>
         </div>
 
         <div className="text-center sm:text-left mx-auto">
           <p className="text-xl font-medium text-white">Helpful Links</p>
 
-          <ul className="mt-8 space-y-4 text-sm">
+          <ul className="mt-8 space-y-4 text-sm text-center">
             <li>
               <a
                 className="text-white transition hover:text-white/75"

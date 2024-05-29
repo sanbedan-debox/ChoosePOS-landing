@@ -45,10 +45,10 @@ const Home: NextPage = () => {
         <SecFooter />
         {/* Secondary Footer */}
         {/* Divider */}
-        {/* <div className="border-t py-2 mt-2 border-neutral-700"></div> */}
-        {/* <Footertwo /> */}
+        <div className="border-t py-2 mt-2 border-neutral-700"></div>
+        <Footertwo />
       </div>
-      <Footerlast />
+      {/* <Footerlast /> */}
       {/* <Footerthree /> */}
     </>
   );

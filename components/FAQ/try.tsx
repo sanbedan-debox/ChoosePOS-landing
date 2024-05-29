@@ -9,16 +9,21 @@ const FAQSectiontry = () => {
 
   return (
     <section id="faq" className="">
-      <div className="container mx-auto">
-        <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-20 text-center font-semibold text-white">
+      <div className="container mx-auto mb-35">
+        <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-10 md:mb-20 text-center font-semibold text-white">
           Frequently asked questions
         </h1>
 
-        <div className="space-y-8 ">
+        <div className="space-y-8">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg bg-secondary bg-opacity-20 transition duration-3900"
+              className="p-4 rounded-lg bg-secondary bg-opacity-20 overflow-hidden"
+              style={{
+                maxHeight: openIndex === index ? "1000px" : "80px",
+                transition: "max-height 0.5s ease", // Adjust the duration here
+                overflow: "hidden",
+              }}
             >
               <button
                 className="flex items-center justify-between w-full"
@@ -31,8 +36,8 @@ const FAQSectiontry = () => {
                 <span
                   className={`rounded-full ${
                     openIndex === index
-                      ? "text-primary bg-gray-200"
-                      : "text-white bg-primary"
+                      ? "text-white bg-transparent"
+                      : "text-white bg-transparent"
                   }`}
                 >
                   <svg

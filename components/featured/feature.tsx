@@ -6,9 +6,9 @@ import { fadeIn } from "@/utils/motion";
 
 const FeatureSection = () => {
   return (
-    <div className="relative  max-w-screen-xl   mx-auto px-4  pb-20  ">
+    <div className="relative  max-w-screen-xl   mx-auto px-4  mb-35   ">
       <div className="text-center">
-        <h2 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0 mb-20   font-semibold">
+        <h2 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl   md:mt-0 mb-10 md:mb-20   font-semibold">
           Hold on{" "}
           <span
             // style={{
@@ -24,10 +24,10 @@ const FeatureSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="flex flex-wrap  mx-auto"
+        className="flex flex-wrap  mx-auto my-auto"
       >
         {features.map((feature, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 mb-8 ">
+          <div key={index} className="w-full  sm:w-1/2 lg:w-1/3 mb-8 ">
             <div className="flex items-start">
               <div
                 // style={{

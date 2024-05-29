@@ -6,10 +6,10 @@ const Features = () => {
   return (
     <section
       id="feat"
-      className="mx-auto  px-4  lg:flex  pb-20 flex-col items-center overflow-hidden bg-feature-bg"
+      className="mx-auto  px-4  lg:flex  flex-col items-center overflow-hidden bg-feature-bg mb-35 "
     >
       <div className="text-center">
-        <h2 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl  mb-10 md:mt-0 md:mb-20  md:justify-center  font-semibold">
+        <h2 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0 mb-10 md:mb-20  md:justify-center font-semibold">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
             Features
@@ -17,14 +17,14 @@ const Features = () => {
         </h2>
       </div>
       <div className="mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 relative w-full flex justify-between ">
-        <div className="hidden lg:flex items-center justify-center lg:max-h-[525px] h-full">
+        <div className="hidden lg:flex items-center justify-center lg:max-h-[300px] h-full">
           <video
-            src="/vid8.mp4"
+            src="/vid7.mp4"
             autoPlay
             controls
             loop
             className="rounded-lg"
-            style={{ height: "525px" }}
+            style={{ height: "300px" }}
           />{" "}
         </div>
 
