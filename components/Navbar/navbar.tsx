@@ -37,7 +37,7 @@ const Navbar: FC = () => {
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
               href="#"
-              className="py-2 px-3 rounded-full text-white text-bold bg-primary"
+              className="py-2 px-3 rounded-full text-white text-bold bg-primary hover:bg-white hover:text-primary"
               // style={{
               //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
               // }}
@@ -52,7 +52,7 @@ const Navbar: FC = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-black w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-primary bg-opacity-50 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item: NavItem, index: number) => (
                 <li key={index} className="py-4">

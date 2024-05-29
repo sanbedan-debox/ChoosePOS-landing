@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <FeatureSection />
       {/* </div> */}
       <div className="relative">
-        <div className="gradient-03 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>
+        <div className="gradient-02 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>
       </div>
 
       {/* <TitleComponent /> */}

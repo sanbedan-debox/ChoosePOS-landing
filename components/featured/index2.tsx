@@ -10,7 +10,7 @@ const Features = () => {
       className="mx-auto  px-4  lg:flex  flex-col items-center overflow-hidden bg-feature-bg mb-35 "
     >
       <div className="text-center">
-        <h2 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0 mb-10 md:mb-20  md:justify-center font-semibold">
+        <h2 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0 mb-10 md:mb-20  md:justify-center font-semibold">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
             Features
@@ -89,9 +89,9 @@ type FeatureItemProps = {
 
 const FeatureItem = ({ title, icon, description }: FeatureItemProps) => {
   return (
-    <li className="flex w-full flex-1 flex-col items-start rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105">
-      <h2 className="text-xl font-semibold mt-1">{title}</h2>
-      <p className="text-md mt-2 text-neutral-300">{description}</p>
+    <li className="flex w-full flex-1 flex-col items-start rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 h-40">
+      <h2 className=" ">{title}</h2>
+      <p className="text-md mt-2 text-neutral-400">{description}</p>
     </li>
   );
 };

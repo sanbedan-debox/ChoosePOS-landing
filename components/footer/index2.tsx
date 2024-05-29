@@ -8,47 +8,23 @@ const Footertwo = () => {
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
+              Features
+            </a>
+          </div>
+          <div className="px-5 py-2">
+            <a
+              href="#"
+              className="text-base leading-6 text-white hover:text-gray-400"
+            >
+              FAQ
+            </a>
+          </div>
+          <div className="px-5 py-2">
+            <a
+              href="#"
+              className="text-base leading-6 text-white hover:text-gray-400"
+            >
               About
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="#"
-              className="text-base leading-6 text-white hover:text-gray-400"
-            >
-              Blog
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="#"
-              className="text-base leading-6 text-white hover:text-gray-400"
-            >
-              Team
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="#"
-              className="text-base leading-6 text-white hover:text-gray-400"
-            >
-              Pricing
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="#"
-              className="text-base leading-6 text-white hover:text-gray-400"
-            >
-              Contact
-            </a>
-          </div>
-          <div className="px-5 py-2">
-            <a
-              href="#"
-              className="text-base leading-6 text-white hover:text-gray-400"
-            >
-              Terms
             </a>
           </div>
         </nav>

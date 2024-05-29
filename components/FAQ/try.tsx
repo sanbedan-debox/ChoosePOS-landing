@@ -10,8 +10,8 @@ const FAQSectiontry = () => {
 
   return (
     <section id="faq" className="">
-      <div className="container mx-auto mb-35">
-        <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-10 md:mb-20 text-center font-semibold text-white">
+      <div className="container mx-auto mb-10 md:mb-35 ">
+        <h1 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl mb-10 md:mb-20 text-center font-semibold text-white">
           Frequently asked{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
             questions
@@ -39,7 +39,7 @@ const FAQSectiontry = () => {
                   className="flex items-center justify-between w-full"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h1 className="font-semibold text-xl text-white">
+                  <h1 className="font-semibold text-sm md:text-xl text-white">
                     {faq.question}
                   </h1>
 
@@ -72,7 +72,7 @@ const FAQSectiontry = () => {
                 </button>
 
                 {openIndex === index && (
-                  <p className="mt-2 text-md text-gray-200 dark:text-gray-300">
+                  <p className="mt-2 text-md text-md  text-neutral-400">
                     {faq.answer}
                   </p>
                 )}

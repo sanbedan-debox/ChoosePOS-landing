@@ -175,7 +175,7 @@ export const footerVariants: { [key: string]: any } = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 0.5,
+      delay: 0.2,
     },
   },
 };

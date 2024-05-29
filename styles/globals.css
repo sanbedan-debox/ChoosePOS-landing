@@ -57,7 +57,12 @@
     filter: blur(190px);
   }
   .gradient-03 {
-    background: linear-gradient(135deg, #162cf1, #162cf1);
+    background: linear-gradient(
+      135deg,
+      rgba(45, 72, 152, 0.15),
+      #162cf1,
+      rgba(45, 72, 152, 0.15)
+    );
     filter: blur(500px);
     transform: rotate(-114.2deg);
   }
