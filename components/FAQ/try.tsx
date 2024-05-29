@@ -28,7 +28,7 @@ const FAQSectiontry = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg bg-secondary bg-opacity-20 overflow-hidden"
+                className="p-4 rounded-lg bg-primary bg-opacity-20 overflow-hidden"
                 style={{
                   maxHeight: openIndex === index ? "1000px" : "80px",
                   transition: "max-height 0.5s ease", // Adjust the duration here
