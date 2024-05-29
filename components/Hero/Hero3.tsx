@@ -35,7 +35,7 @@ export const Header = () => {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="flex-1 w-full h-10 px-4 py-2 m-1 text-white placeholder-white bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0"
+                  className="flex-1 w-full h-10 px-4 py-2 m-1 text-white placeholder:text-xs md:placeholder:text-lg placeholder-white bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0"
                 />
                 <button
                   type="button"
