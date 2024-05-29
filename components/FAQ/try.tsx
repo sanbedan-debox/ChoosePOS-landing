@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 const FAQSectiontry = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -13,60 +14,69 @@ const FAQSectiontry = () => {
         <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-10 md:mb-20 text-center font-semibold text-white">
           Frequently asked questions
         </h1>
-
-        <div className="space-y-8">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="p-4 rounded-lg bg-secondary bg-opacity-20 overflow-hidden"
-              style={{
-                maxHeight: openIndex === index ? "1000px" : "80px",
-                transition: "max-height 0.5s ease", // Adjust the duration here
-                overflow: "hidden",
-              }}
-            >
-              <button
-                className="flex items-center justify-between w-full"
-                onClick={() => toggleFAQ(index)}
+        <LazyMotion features={domAnimation}>
+          <m.div
+            variants={fadeIn("up", "tween", 0, 0.5)} // Adjust direction, type, delay, and duration for desired effect
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="space-y-8"
+          >
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="p-4 rounded-lg bg-secondary bg-opacity-20 overflow-hidden"
+                style={{
+                  maxHeight: openIndex === index ? "1000px" : "80px",
+                  transition: "max-height 0.5s ease", // Adjust the duration here
+                  overflow: "hidden",
+                }}
               >
-                <h1 className="font-semibold text-xl text-white">
-                  {faq.question}
-                </h1>
-
-                <span
-                  className={`rounded-full ${
-                    openIndex === index
-                      ? "text-white bg-transparent"
-                      : "text-white bg-transparent"
-                  }`}
+                <button
+                  className="flex items-center justify-between w-full"
+                  onClick={() => toggleFAQ(index)}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d={
-                        openIndex === index ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"
-                      }
-                    />
-                  </svg>
-                </span>
-              </button>
+                  <h1 className="font-semibold text-xl text-white">
+                    {faq.question}
+                  </h1>
 
-              {openIndex === index && (
-                <p className="mt-2 text-md text-gray-200 dark:text-gray-300">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
+                  <span
+                    className={`rounded-full ${
+                      openIndex === index
+                        ? "text-white bg-transparent"
+                        : "text-white bg-transparent"
+                    }`}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d={
+                          openIndex === index
+                            ? "M5 15l7-7 7 7"
+                            : "M19 9l-7 7-7-7"
+                        }
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                {openIndex === index && (
+                  <p className="mt-2 text-md text-gray-200 dark:text-gray-300">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            ))}
+          </m.div>
+        </LazyMotion>
       </div>
     </section>
   );

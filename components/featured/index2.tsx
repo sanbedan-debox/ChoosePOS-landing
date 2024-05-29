@@ -1,7 +1,8 @@
 // export default Features;
 import { FEATURES } from "@/constants";
 import React from "react";
-
+import { m, LazyMotion, domAnimation } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 const Features = () => {
   return (
     <section
@@ -27,25 +28,32 @@ const Features = () => {
             style={{ height: "300px" }}
           />{" "}
         </div>
-
-        <div className="z-20 flex w-full flex-col lg:w-[60%] ">
-          <ul className=" grid gap-10 md:gap-20 md:grid-cols-2 lg:mg-20 lg:gap-8">
-            {FEATURES.map((feature) => (
-              <FeatureItem
-                key={feature.title}
-                title={feature.title}
-                icon={feature.icon}
-                description={feature.description}
-              />
-            ))}
-            {/* Anchor tab */}
-            <li className="flex w-full flex-1 flex-col items-center justify-center  transition duration-300 ease-in-out transform hover:scale-105">
-              <button className="inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
-                Know More
-              </button>
-            </li>
-          </ul>
-        </div>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            variants={fadeIn("up", "tween", 0, 0.5)} // Adjust direction, type, delay, and duration for desired effect
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="z-20 flex w-full flex-col lg:w-[60%] "
+          >
+            <ul className=" grid gap-10 md:gap-20 md:grid-cols-2 lg:mg-20 lg:gap-8">
+              {FEATURES.map((feature) => (
+                <FeatureItem
+                  key={feature.title}
+                  title={feature.title}
+                  icon={feature.icon}
+                  description={feature.description}
+                />
+              ))}
+              {/* Anchor tab */}
+              <li className="flex w-full flex-1 flex-col items-center justify-center  transition duration-300 ease-in-out transform hover:scale-105">
+                <button className="inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
+                  Know More
+                </button>
+              </li>
+            </ul>
+          </m.div>
+        </LazyMotion>
       </div>
     </section>
   );
