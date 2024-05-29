@@ -12,7 +12,10 @@ const FAQSectiontry = () => {
     <section id="faq" className="">
       <div className="container mx-auto mb-35">
         <h1 className="text-xl md:text-3xl sm:text-4xl lg:text-5xl mb-10 md:mb-20 text-center font-semibold text-white">
-          Frequently asked questions
+          Frequently asked{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            questions
+          </span>
         </h1>
         <LazyMotion features={domAnimation}>
           <m.div

@@ -46,11 +46,33 @@ const Features = () => {
                 />
               ))}
               {/* Anchor tab */}
-              <li className="flex w-full flex-1 flex-col items-center justify-center  transition duration-300 ease-in-out transform hover:scale-105">
-                <button className="inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
+              <li className="flex w-full flex-1 flex-col items-center justify-center transition duration-300 ease-in-out transform hover:scale-105">
+                <button className="relative inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
                   Know More
+                  <span className="absolute right-0 top-0 bottom-0 flex items-center justify-center pr-4 opacity-0 transition-opacity duration-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-10 w-10 stroke-current transform "
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v8m0 0l-4-4m4 4l4-4"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </li>
+
+              <style jsx>
+                {`
+                  .relative:hover .opacity-0 {
+                    opacity: 1;
+                  }
+                `}
+              </style>
             </ul>
           </m.div>
         </LazyMotion>
