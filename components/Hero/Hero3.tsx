@@ -1,4 +1,5 @@
-export const Header = () => {
+import { FC } from "react";
+const Header: FC = () => {
   return (
     <div className="px-4  mx-auto md:px-24 lg:px-8 mt-30 mb-35">
       <div className="mx-auto">
@@ -92,3 +93,5 @@ export const Header = () => {
     </div>
   );
 };
+
+export default Header;

@@ -24,7 +24,7 @@ const Footertwo = () => {
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
-              About
+              About Us
             </a>
           </div>
         </nav>

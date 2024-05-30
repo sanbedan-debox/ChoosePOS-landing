@@ -102,3 +102,13 @@
   backdrop-filter: blur(10px); /* Apply blur effect */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow */
 }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-content.max-h-96 {
+  max-height: 24rem; /* Adjust this value as needed */
+}

@@ -1,19 +1,13 @@
 import React from "react";
 import { NextPage } from "next";
 import Navbar from "@/components/Navbar/navbar";
-import HeroSection from "@/components/Hero/Hero";
-import FeatureSection from "@/components/featured/feature";
-import Footer from "@/components/footer";
+import FeatureSection from "@/components/features/feature";
 import SecFooter from "@/components/secfooter";
-import MetricsComponent from "@/components/metrics";
-import TitleComponent from "@/components/common/TitleComponent";
-import Featurestwo from "@/components/featured/index2";
-import FAQSectiontry from "@/components/FAQ/try";
+import Featurestwo from "@/components/features/index2";
 import Footertwo from "@/components/footer/index2";
-import { Footerthree } from "@/components/footer/index3";
-import { Header } from "@/components/Hero/Hero3";
-import Footerlast from "@/components/footer/index4";
 import ImageWithText from "@/option2comps/titleComp";
+import { Header } from "@/components";
+import FAQSectiontry from "@/unusedComps/faq/try";
 
 const Home: NextPage = () => {
   return (

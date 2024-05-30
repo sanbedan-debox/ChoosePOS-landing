@@ -1,5 +1,5 @@
 // export default Features;
-import { FEATURES } from "@/constants";
+import { FEATURES } from "../../utils/constant";
 import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { fadeIn } from "@/utils/motion";

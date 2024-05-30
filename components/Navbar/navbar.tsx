@@ -1,9 +1,8 @@
 import { Menu, X } from "lucide-react";
 import { useState, FC } from "react";
 import logo1 from "../../assets/logo/logoWhite.png";
-import { navItems } from "../../constants";
+import { navItems } from "../../utils/constant";
 import Image from "next/image";
-import { neongGradient } from "@/colors/gradients";
 
 interface NavItem {
   href: string;
@@ -38,9 +37,6 @@ const Navbar: FC = () => {
             <a
               href="#"
               className="py-2 px-3 rounded-full text-white text-bold bg-primary hover:bg-white hover:text-primary"
-              // style={{
-              //   backgroundImage: `linear-gradient(to right, ${neongGradient.from}, ${neongGradient.to})`,
-              // }}
             >
               Join The Waitlist
             </a>
@@ -52,19 +48,27 @@ const Navbar: FC = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-primary bg-opacity-50 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-primary w-full p-12 flex flex-col justify-center items-start lg:hidden">
             <ul>
               {navItems.map((item: NavItem, index: number) => (
                 <li key={index} className="py-4">
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
+              <li className="py-4">
+                <a href="#" className=" text-white">
+                  Contact Us
+                </a>{" "}
+              </li>
             </ul>
-            <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 rounded-md  bg-primary">
+            {/* <div className="flex space-x-6">
+              <a
+                href="#"
+                className="py-2 px-3 rounded-md bg-white text-primary"
+              >
                 Contact Us
               </a>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
