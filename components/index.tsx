@@ -1,0 +1,13 @@
+export { default as Navbar } from "@/components/Navbar/navbar";
+export { default as HeroSection } from "@/components/Hero/Hero";
+export { default as FeatureSection } from "@/components/featured/feature";
+export { default as Footer } from "@/components/footer";
+export { default as SecFooter } from "@/components/secfooter";
+export { default as MetricsComponent } from "@/components/metrics";
+export { default as TitleComponent } from "@/components/common/TitleComponent";
+export { default as Featurestwo } from "@/components/featured/index2";
+export { default as FAQSectiontry } from "@/components/FAQ/try";
+export { default as Footertwo } from "@/components/footer/index2";
+export { Footerthree } from "@/components/footer/index3";
+export { Header } from "@/components/Hero/Hero3";
+export { default as Footerlast } from "@/components/footer/index4";
