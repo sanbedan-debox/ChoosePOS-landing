@@ -3,6 +3,7 @@ import { useState, FC } from "react";
 import logo1 from "../../assets/logo/logoWhite.png";
 import { navItems } from "../../utils/constant";
 import Image from "next/image";
+import JoinUsButton from "../common/joinUsBtn";
 
 interface NavItem {
   href: string;
@@ -26,7 +27,7 @@ const Navbar: FC = () => {
             </a>
             {/* <span className="text-2xl text-bold tracking-tight">CHOOSE</span> */}
           </div>
-          <ul className="hidden lg:flex ml-14 space-x-12">
+          <ul className="hidden lg:flex ml-14 text-lg space-x-12">
             {navItems.map((item: NavItem, index: number) => (
               <li key={index}>
                 <a href={item.href}>{item.label}</a>
@@ -34,12 +35,13 @@ const Navbar: FC = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a
+            {/* <a
               href="#"
               className="py-2 px-3 rounded-full text-white text-bold bg-primary hover:bg-white hover:text-primary"
             >
               Join The Waitlist
-            </a>
+            </a> */}
+            <JoinUsButton text="Join the Waitlist" />
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>

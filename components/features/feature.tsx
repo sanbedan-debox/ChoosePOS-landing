@@ -84,7 +84,7 @@ const FeatureSection = () => {
                   {feature.icon}
                 </div>
                 <div className="ml-4">
-                  <h5 className="text-xl font-semibold mt-1">{feature.text}</h5>
+                  <h5 className="text-lg font-semibold mt-1">{feature.text}</h5>
                   <p className="text-md mt-2 text-neutral-400">
                     {feature.description}
                   </p>

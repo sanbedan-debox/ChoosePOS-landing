@@ -29,7 +29,7 @@ const FAQnew: React.FC = () => {
                 className={`flex items-center justify-between w-full`}
                 onClick={() => toggleAccordion(index)}
               >
-                <h1 className="font-semibold text-sm md:text-xl text-white">
+                <h1 className="text-lg  text-white text-start">
                   {faq.question}
                 </h1>
 

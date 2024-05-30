@@ -9,11 +9,15 @@ import {
   FAQnew,
   Footertwo,
 } from "@/components";
+import HeroSection from "@/components/Hero/Hero";
+import HeroSecSection from "@/components/Hero/Hero2";
 const Home: NextPage = () => {
   return (
     <>
       <Navbar />
+      {/* <div className="footer-gradient  absolute w-full h-[200px] top-40 right-0 z-[-1]"></div> */}
       <Header />
+      {/* <HeroSecSection /> */}
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
       <div className="relative">
         <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
