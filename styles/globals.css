@@ -112,3 +112,8 @@
 .accordion-content.max-h-96 {
   max-height: 24rem; /* Adjust this value as needed */
 }
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(20px); /* Standard syntax */
+  -webkit-backdrop-filter: blur(20px); /* Safari syntax */
+}
