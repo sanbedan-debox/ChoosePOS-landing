@@ -89,7 +89,7 @@ type FeatureItemProps = {
 
 const FeatureItem = ({ title, icon, description }: FeatureItemProps) => {
   return (
-    <li className="flex w-full flex-1 flex-col items-start rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-6 transition duration-300 ease-in-out transform hover:scale-105 h-40">
+    <li className="flex w-full flex-1 flex-col items-start rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-2 md:p-6 transition duration-300 ease-in-out transform hover:scale-105 h-40">
       <h2 className="text-lg">{title}</h2>
       <p className="text-md mt-2 text-neutral-400">{description}</p>
     </li>

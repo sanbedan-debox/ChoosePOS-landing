@@ -21,7 +21,7 @@ const FAQnew: React.FC = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`p-4 rounded-lg bg-primary bg-opacity-20 overflow-hidden transition-max-h duration-500 ease-in-out mb-8 lg:p-4 ${
+              className={` p-2 md:p-4 rounded-lg bg-primary bg-opacity-20 overflow-hidden transition-max-h duration-500 ease-in-out mb-8 lg:p-4 ${
                 activeIndex === index ? "max-h-[600px]" : "max-h-[80px]"
               }`}
             >
