@@ -85,14 +85,17 @@
       rgba(255, 255, 255, 0) 100%
     );
   }
-
   .footer-gradient {
     position: absolute;
-    width: 500px;
-    height: 100px;
-    left: 37%;
+    width: 200px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    right: 100;
     bottom: 0;
-    background: linear-gradient(90deg, #2b2bd2, #307fa1);
+    background: linear-gradient(
+      90deg,
+      #2b2bd2,
+      #307fa1
+    ); /* Adjust gradient colors as needed */
     filter: blur(150px);
   }
 }

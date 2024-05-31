@@ -13,18 +13,20 @@ const TitleComp2: React.FC = () => {
         className="z-0 rounded-xl"
       />
 
+      {/* Updated styled div with decorative background */}
       <div
-        style={{ height: "10rem" }}
-        className="absolute bottom-0 left-0 w-full bg-primary bg-opacity-20 flex flex-col justify-center items-center z-10"
+        style={{ height: "10rem", backgroundImage: "url('/vector-art.jpg')" }} // Replace 'vector-art.jpg' with your vector art image
+        className="absolute bottom-0 left-0 w-full bg-cover flex flex-col justify-center items-center z-10"
       >
-        <div className="text-white text-center">
-          <p className="text-3xl flex flex-col font-bold mb-2">
-            {" "}
-            &quot;Restaurant Owners should focus only on the Top 2 Metrics -
-            Great Food and Great Service.&quot;
-          </p>
-          <p className="text-2xl font-semibold">
-            For everything else they need to CHOOSE the right partner
+        <div
+          className="text-white text-center px-6"
+          style={{ textShadow: "1px 1px 0px black" }}
+        >
+          <p className="text-3xl font-bold mb-2">
+            "Restaurant Owners should focus only on the Top 2 Metrics - Great
+            Food and Great Service." For everything else they need to
+            <span className="text-primary"> CHOOSE </span>
+            the right partner
           </p>
         </div>
       </div>
