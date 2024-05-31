@@ -11,12 +11,14 @@ import { Header } from "@/components";
 import FAQSectiontry from "@/unusedComps/faq/try";
 import Bentogrid from "@/option2comps/bentofeat/bento";
 import TitleComp2 from "@/option2comps/titleComp2";
+import BentoGrid from "@/option2comps/bento";
 
 const Home: NextPage = () => {
   return (
     <>
       <Navbar />
       <Header />
+      <BentoGrid />
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
       <TitleComp2 />
       <div className="relative">
