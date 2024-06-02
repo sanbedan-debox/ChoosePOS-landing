@@ -13,14 +13,18 @@
     "@tabler/icons-react": "^3.5.0",
     "clsx": "^2.1.1",
     "file-loader": "^6.2.0",
-    "framer-motion": "^11.2.9",
+    "framer-motion": "^11.2.10",
     "lucide-react": "^0.379.0",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
     "nextjs-progressbar": "^0.0.16",
     "react": "^18",
     "react-dom": "^18",
+    "react-element-to-jsx-string": "^15.0.0",
+    "react-icons": "^5.2.1",
     "react-typed": "^2.0.12",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
