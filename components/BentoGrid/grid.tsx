@@ -75,7 +75,7 @@ const Grid = () => {
       id="feat"
       className="mx-auto  px-4  lg:flex  flex-col items-center overflow-hidden bg-feature-bg mb-35 "
     >
-      <div className="text-center">
+      <div className="text-center z-20">
         <h2 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0  md:justify-center font-semibold">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">

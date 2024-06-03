@@ -1,7 +1,5 @@
-import Grid from "@/pages/grid";
-import Hero from "@/option3comps/hero/Hero";
 import { NextPage } from "next";
-import Heroopt3 from "./hero1";
+
 import {
   FAQnew,
   FeatureSection,
@@ -9,6 +7,8 @@ import {
   Navbar,
   SecFooter,
 } from "@/components";
+import Heroopt3 from "@/components/Hero/Hero4";
+import Grid from "@/components/BentoGrid/grid";
 
 const Home: NextPage = () => {
   return (
