@@ -134,6 +134,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
+    image: "/jojo.jpg",
   },
   {
     title: "Seamless 3rd Party integrations",
@@ -141,6 +142,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
+    image: "/jojo.jpg",
   },
   {
     title: "Data Insights like never before",
@@ -148,6 +150,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
+    image: "/jojo.jpg",
   },
   {
     title: "Reports that drive Business",
@@ -155,6 +158,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
+    image: "/jojo.jpg",
   },
   {
     title: "Protection against Disputes",
@@ -162,6 +166,7 @@ export const FEATURES = [
     variant: "orange",
     description:
       "No questions asked coverage against customer disputes and chargebacks",
+    image: "/jojo.jpg",
   },
 ];
 

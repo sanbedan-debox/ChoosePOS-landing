@@ -22,7 +22,7 @@ const Grid = () => {
       imgClassName: "",
       titleClassName: "justify-start",
       img: "",
-      spareImg: "",
+      spareImg: "/grid.svg",
     },
     {
       id: 3,
@@ -43,8 +43,8 @@ const Grid = () => {
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
-      spareImg: "/b4.svg",
+      spareImg: "/grid.svg",
+      img: "",
     },
 
     {
@@ -53,9 +53,10 @@ const Grid = () => {
       description:
         "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
       className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      imgClassName:
+        "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg opacity-50",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/b5.svg",
+      img: "/jojo.jpg",
       spareImg: "/grid.svg",
     },
     {

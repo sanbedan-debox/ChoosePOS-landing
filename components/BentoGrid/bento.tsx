@@ -117,15 +117,14 @@ export const BentoGridItem = ({
           )}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-400 z-10">
-            {description}
-          </div>
+
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
+          <div className={` text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
+          </div>
+          <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-400 z-10">
+            {description}
           </div>
 
           {/* for the github 3d globe */}

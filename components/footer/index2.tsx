@@ -62,16 +62,21 @@ const Footertwo = () => {
           <a href="#" className="text-white hover:text-gray-500">
             <span className="sr-only">Twitter</span>
             <svg
-              className="w-6 h-6 text-white hover:text-gray-500"
-              aria-hidden="true"
-              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-brand-x w-6 h-6"
+              // color="white"
+
               viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#FFFFFF"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
-              <path
-                fill-rule="evenodd"
-                d="M17.707 6.293a1 1 0 010 1.414L13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 01-1.414-1.414L10.586 12 6.293 7.707a1 1 0 011.414-1.414L12 10.586l4.293-4.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
             </svg>
           </a>
         </div>
