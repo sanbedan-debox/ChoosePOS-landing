@@ -8,7 +8,7 @@ import EnrollInput from "../common/enrollInput";
 // Define Footer component
 const SecFooter: React.FC = () => (
   <>
-    <footer className="relative">
+    <footer className="relative" id="enroll">
       <div className="gradient-02 absolute w-full h-[20px] md:h-[300px] left-0 bottom-0 z-[-8]"></div>
       <motion.div
         variants={footerVariants}

@@ -51,17 +51,6 @@ const Heroopt3 = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
           <EnrollInput buttonText={"Join Now"} />
-
-          <p className="text-center md:tracking-wider mt-8  text-neutral-300 mb-8 text-sm md:text-lg lg:text-2xl">
-            Restaurant Owners should focus only on the Top 2 Metrics -
-            <br />
-            Great Food and Great Service.
-            <br />
-            For everything else they need to Choose the right partner :)
-            <br />
-            Checkout our Feature List. And do note that we are just getting
-            started!
-          </p>
         </div>
       </div>
     </div>

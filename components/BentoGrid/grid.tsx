@@ -10,7 +10,7 @@ const Grid = () => {
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/tech.jpg",
       spareImg: "",
     },
     {
@@ -21,7 +21,7 @@ const Grid = () => {
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "",
+      img: "/party.jpg",
       spareImg: "/grid.svg",
     },
     {
@@ -31,9 +31,9 @@ const Grid = () => {
         "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
-      titleClassName: "justify-center",
-      img: "",
-      spareImg: "",
+      titleClassName: "justify-center text-white",
+      img: "/f2.jpg",
+      spareImg: "/insight.jpg",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ const Grid = () => {
       imgClassName: "",
       titleClassName: "justify-start",
       spareImg: "/grid.svg",
-      img: "",
+      img: "/disputes.jpg",
     },
 
     {
@@ -53,10 +53,9 @@ const Grid = () => {
       description:
         "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
       className: "md:col-span-3 md:row-span-2",
-      imgClassName:
-        "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg opacity-50",
+      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg ",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/jojo.jpg",
+      img: "/report.jpg",
       spareImg: "/grid.svg",
     },
     {

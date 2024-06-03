@@ -9,6 +9,9 @@ const Header: FC = () => {
       <div className="text-center">
         <div className="md:mx-auto sm:text-center md:mb-12">
           <div className="flex-grow flex flex-col justify-center items-center">
+            <p className="uppercase tracking-widest mb-8 bg-white text-md text-center text- max-w-90 text-primary text-opacity-90">
+              CHOOSE where transactions meet simplicity
+            </p>
             <h1 className="text-4xl max-w-7xl sm:text-6xl font-bold lg:text-6xl text-center tracking-wide">
               Revolutionising how Restaurants <br />
               use{" "}

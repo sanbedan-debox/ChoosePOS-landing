@@ -127,14 +127,14 @@ export const faqs = [
 ];
 
 // FEATURES SECTION
-export const FEATURES = [
+export const FEATURESrow1 = [
   {
     title: "Cutting-edge Online Ordering",
     icon: "/map.svg",
     variant: "green",
     description:
       "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
-    image: "/jojo.jpg",
+    image: "/tech.jpg",
   },
   {
     title: "Seamless 3rd Party integrations",
@@ -142,7 +142,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
-    image: "/jojo.jpg",
+    image: "/party.jpg",
   },
   {
     title: "Data Insights like never before",
@@ -150,7 +150,51 @@ export const FEATURES = [
     variant: "green",
     description:
       "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
-    image: "/jojo.jpg",
+    image: "/insight.jpg",
+  },
+];
+export const FEATURErow2 = [
+  {
+    title: "Reports that drive Business",
+    icon: "/tech.svg",
+    variant: "green",
+    description:
+      "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
+    image: "/report.jpg",
+  },
+  {
+    title: "Protection against Disputes",
+    icon: "/location.svg",
+    variant: "orange",
+    description:
+      "No questions asked coverage against customer disputes and chargebacks",
+    image: "/disputes.jpg",
+  },
+];
+export const FEATURES = [
+  {
+    title: "Cutting-edge Online Ordering",
+    icon: "/map.svg",
+    variant: "green",
+    description:
+      "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
+    image: "/f1.jpg",
+  },
+  {
+    title: "Seamless 3rd Party integrations",
+    icon: "/map.svg",
+    variant: "green",
+    description:
+      "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
+    image: "/f2.jpg",
+  },
+  {
+    title: "Data Insights like never before",
+    icon: "/calendar.svg",
+    variant: "green",
+    description:
+      "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
+    image: "/f3.jpg",
   },
   {
     title: "Reports that drive Business",
@@ -158,7 +202,7 @@ export const FEATURES = [
     variant: "green",
     description:
       "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
-    image: "/jojo.jpg",
+    image: "/f4.jpg",
   },
   {
     title: "Protection against Disputes",

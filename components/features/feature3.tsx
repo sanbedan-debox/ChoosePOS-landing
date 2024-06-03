@@ -1,4 +1,4 @@
-import { FEATURES } from "../../utils/constant";
+import { FEATURErow2, FEATURESrow1 } from "../../utils/constant";
 import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
@@ -24,10 +24,10 @@ const Featurebox = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="z-20 flex w-full flex-col lg:w-[80%]"
+          className="z-20 flex w-full flex-col lg:w-[80%] "
         >
-          <ul className="grid gap-10 md:gap-20 md:grid-cols-2 lg:mg-1 lg:gap-8">
-            {FEATURES.map((feature) => (
+          <ul className="grid gap-10 md:gap-20 md:grid-cols-3 lg:mg-1 lg:gap-8 mb-10">
+            {FEATURESrow1.map((feature) => (
               <FeatureItem
                 key={feature.title}
                 title={feature.title}
@@ -35,6 +35,7 @@ const Featurebox = () => {
                 image={feature.image} // Add image prop
               />
             ))}
+
             {/* Anchor tab */}
             {/* <li className="flex w-full flex-1 flex-col items-center justify-center transition duration-300 ease-in-out transform hover:scale-105">
               <button className="relative inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
@@ -55,9 +56,9 @@ const Featurebox = () => {
                 </span>
               </button>
             </li> */}
-            <li className="flex w-full flex-1 flex-col justify-between items-center rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-2 md:p-6 transition duration-300 ease-in-out transform hover:scale-105 h-auto md:h-96">
+            {/* <li className="flex w-full flex-1 flex-col justify-between items-center rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-2 md:p-6 transition duration-300 ease-in-out transform hover:scale-105 h-auto md:h-96">
               <img
-                src="./jojo.jpg"
+                src="./f6.jpg"
                 alt="Enroll Now"
                 className="w-full h-48 object-cover rounded-t-lg"
               />
@@ -68,7 +69,7 @@ const Featurebox = () => {
                 Join the Waitlist :)
               </h2>
               <EnrollInput buttonText={"Enroll Now"} />
-            </li>
+            </li> */}
 
             <style jsx>
               {`
@@ -77,6 +78,16 @@ const Featurebox = () => {
                 }
               `}
             </style>
+          </ul>
+          <ul className="grid gap-10 md:gap-20 md:grid-cols-2 lg:mg-1 lg:gap-8">
+            {FEATURErow2.map((feature) => (
+              <FeatureItem
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                image={feature.image} // Add image prop
+              />
+            ))}
           </ul>
         </m.div>
       </LazyMotion>

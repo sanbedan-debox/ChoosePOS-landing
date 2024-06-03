@@ -38,7 +38,9 @@ const Navbar: FC = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <JoinUsButton text="Join the Waitlist" />
+            <a href="#enroll">
+              <JoinUsButton text="Join the Waitlist" />
+            </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -60,8 +62,8 @@ const Navbar: FC = () => {
                 </li>
               ))}
               <li className="text-xl hover:text-neutral-400 px-4 py-1 list-item-with-bullet">
-                <a href="#" className="text-white" onClick={closeDrawer}>
-                  Contact Us
+                <a href="#enroll" className="text-white" onClick={closeDrawer}>
+                  Enroll Now
                 </a>
               </li>
             </ul>
