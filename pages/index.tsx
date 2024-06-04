@@ -10,7 +10,7 @@ import {
   Footertwo,
   FeaturesBento,
 } from "@/components";
-import Grid from "@/components/BentoGrid/grid";
+import Grid from "@/pages/BentoGrid/grid";
 const Home: NextPage = () => {
   return (
     <>

@@ -8,7 +8,7 @@ import {
   SecFooter,
 } from "@/components";
 import Heroopt3 from "@/components/Hero/Hero4";
-import Grid from "@/components/BentoGrid/grid";
+import Grid from "@/pages/BentoGrid/grid";
 
 const Home: NextPage = () => {
   return (
