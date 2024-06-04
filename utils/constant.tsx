@@ -5,6 +5,13 @@ import {
   ShieldHalf,
   PlugZap,
   GlobeLock,
+  LayoutDashboard,
+  MonitorSmartphone,
+  CircleGauge,
+  HandCoins,
+  Crown,
+  MessageCircleHeart,
+  BadgeDollarSign,
 } from "lucide-react";
 
 interface NavItem {
@@ -216,40 +223,279 @@ export const FEATURES = [
 
 export const features: Feature[] = [
   {
-    icon: <BotMessageSquare />,
+    icon: <LayoutDashboard />,
     text: "Dashboard with market bechmarking",
     description:
       "Insights from the market to understand the opportunties and leverage them to grow business.",
   },
   {
-    icon: <Fingerprint />,
+    icon: <MonitorSmartphone />,
     text: "Multi-Platform Compatibility",
     description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+      "Seamless Integration with the major 3rd party deliveries along with reports and settlements.",
   },
   {
-    icon: <PlugZap />,
-    text: "Leaderboards to drive Performance",
+    icon: <CircleGauge />,
+    text: "Track & drive Operational Excellence",
     description:
-      "Involve, Recognise and Reward your team and build future leaders",
+      "Tools to track, manage and improve operational efficiency and improve profitability and process adherence",
   },
 
   {
-    icon: <BatteryCharging />,
+    icon: <BadgeDollarSign />,
     text: "Hassle free Tips Management",
     description:
-      "Manage Tips with ease through choosing from our predefined best practices",
+      "Manage Tips with ease through choosing from our predefined best practices and improve Employee Satisfaction and Happiness",
   },
   {
-    icon: <ShieldHalf />,
-    text: "Track & drive Operational Excellence",
+    icon: <Crown />,
+    text: "Leaderboards to drive Performance",
     description:
-      "Tools to track, manage and improve operational efficiency and improve profitability",
+      "Involve, Recognise and Reward your team and retain your best Talent and drive better Customer Experience",
   },
   {
-    icon: <GlobeLock />,
-    text: "Integrated Marketing that delivers Real Growth",
+    icon: <MessageCircleHeart />,
+    text: "Integrated Marketing delivering Real Growth",
     description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+      "Data, Market Insights and a team with a decade plus of Restaurant marketing experience to deliver unmatched ROI",
+  },
+];
+
+export const gridFeatItems = [
+  {
+    id: 1,
+    title: "Cutting-edge Online Ordering",
+    description:
+      "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-end",
+    img: "/tech.webp",
+    spareImg: "",
+  },
+  {
+    id: 2,
+    title: "Seamless 3rd Party integrations",
+    description:
+      "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    img: "",
+    // img: "/party.jpg",
+    spareImg: "",
+  },
+  {
+    id: 3,
+    title: "Data Insights like never before",
+    description:
+      "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    // img: "/insight.jpg",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 4,
+    title: "Protection against Disputes",
+    description:
+      "No questions asked coverage against customer disputes and chargebacks",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    spareImg: "/grid.svg",
+    // img: "/disputes.jpg",
+    img: "",
+  },
+
+  {
+    id: 5,
+    title: "Reports that drive Business",
+    description:
+      "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
+    className: "md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    // imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg ",
+    // titleClassName: "justify-center md:justify-start lg:justify-center",
+    titleClassName: "justify-end ",
+    img: "/reports.webp",
+    spareImg: "",
+  },
+  {
+    id: 6,
+    title: "Know more",
+    description: "And do note that we are just getting started!",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "",
+    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    img: "",
+    spareImg: "/grid.svg",
+  },
+];
+
+export const gridFeatItems2 = [
+  {
+    id: 1,
+    title: "Cutting-edge Online Ordering",
+    description:
+      "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-end",
+    img: "/tech.webp",
+    spareImg: "",
+  },
+  {
+    id: 2,
+    title: "Seamless 3rd Party integrations",
+    description:
+      "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    img: "/f2.jpg",
+    // img: "/party.jpg",
+    spareImg: "",
+  },
+  {
+    id: 3,
+    title: "Data Insights like never before",
+    description:
+      "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    // img: "/insight.jpg",
+    img: "/f3.jpg",
+    spareImg: "",
+  },
+  {
+    id: 4,
+    title: "Protection against Disputes",
+    description:
+      "No questions asked coverage against customer disputes and chargebacks",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "",
+    titleClassName: "justify-end ",
+    spareImg: "/grid.svg",
+    // img: "/disputes.jpg",
+    img: "/f4.jpg",
+  },
+
+  {
+    id: 5,
+    title: "Reports that drive Business",
+    description:
+      "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
+    className: "md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    // imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg ",
+    // titleClassName: "justify-center md:justify-start lg:justify-center",
+    titleClassName: "justify-end ",
+    img: "/reports.webp",
+    spareImg: "",
+  },
+  {
+    id: 6,
+    title: "Know more",
+    description: "And do note that we are just getting started!",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "",
+    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    img: "",
+    spareImg: "/grid.svg",
+  },
+];
+
+export const benefits = [
+  {
+    id: "0",
+    title: "Ask anything",
+    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "1",
+    title: "Improve everyday",
+    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "2",
+    title: "Connect everywhere",
+    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    // iconUrl: benefitIcon3,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "3",
+    title: "Fast responding",
+    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    // iconUrl: benefitIcon4,
+    // imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "4",
+    title: "Ask anything",
+    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    // iconUrl: benefitIcon1,
+    // imageUrl: benefitImage2,
+  },
+  {
+    id: "5",
+    title: "Improve everyday",
+    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    backgroundUrl: "./src/assets/benefits/card-6.svg",
+    // iconUrl: benefitIcon2,
+    // imageUrl: benefitImage2,
+  },
+];
+
+import {
+  AlarmClockOff,
+  ArrowDownNarrowWide,
+  ArrowUpNarrowWide,
+  LucideIcon,
+} from "lucide-react";
+
+interface IInfoCard {
+  title: string;
+  icon: LucideIcon;
+  bodyText: string;
+  id: number;
+}
+
+export const infoCards: IInfoCard[] = [
+  {
+    title: "Increased Sales",
+    bodyText:
+      " Insightful's predictive analytics identify high-value prospects for targeted pitches, boosting conversion rates and sales by up to 20%.",
+    icon: ArrowUpNarrowWide,
+    id: 1,
+  },
+  {
+    title: "No Time Wasted",
+    bodyText:
+      "Insightful automates personalized content creation, freeing up sales reps' time for revenue-focused activities and increased productivity.",
+    icon: AlarmClockOff,
+    id: 2,
+  },
+  {
+    title: "Decreased Churn",
+    bodyText:
+      " Insightful's AI lead engagement and renewal tools reduce customer churn by up to 30% through consistent outreach and retention opportunities.",
+    icon: ArrowDownNarrowWide,
+    id: 3,
   },
 ];

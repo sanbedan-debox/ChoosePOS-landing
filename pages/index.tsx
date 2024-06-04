@@ -8,10 +8,8 @@ import {
   Featurestwo,
   FAQnew,
   Footertwo,
+  FeaturesBento,
 } from "@/components";
-import HeroSection from "@/components/Hero/Hero";
-import HeroSecSection from "@/components/Hero/Hero2";
-import Featurebox from "@/components/features/feature3";
 const Home: NextPage = () => {
   return (
     <>
@@ -22,7 +20,11 @@ const Home: NextPage = () => {
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
       <div className="relative">
         <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
-        <Featurebox />
+        <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+          <div className="max-w-7xl w-full">
+            <FeaturesBento />
+          </div>
+        </div>
       </div>
       <div className="relative">
         <div className="gradient-02 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>

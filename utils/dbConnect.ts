@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-// const MONGODB_URI = process.env.MONGODB_URI || "your_mongodb_connection_string";
-const MONGODB_URI =
-  "mongodb+srv://sanbedan:P14vaXVvwEw9p2N5@landing.uixmtmu.mongodb.net/?retryWrites=true&w=majority&appName=landing";
+const MONGODB_URI: any = process.env.NEXT_PUBLIC_MONGO_URI;
 // P14vaXVvwEw9p2N5
 // sanbedan
 

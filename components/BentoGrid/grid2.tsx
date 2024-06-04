@@ -1,7 +1,7 @@
-import { gridFeatItems } from "@/utils/constant";
+import { gridFeatItems2 } from "@/utils/constant";
 import { BentoGrid, BentoGridItem } from "./bento";
 
-const FeaturesBento = () => {
+const Grid2 = () => {
   return (
     <section
       id="feat"
@@ -16,7 +16,7 @@ const FeaturesBento = () => {
         </h2>
       </div>
       <BentoGrid className="w-full py-20">
-        {gridFeatItems.map((item, i) => (
+        {gridFeatItems2.map((item, i) => (
           <BentoGridItem
             id={item.id}
             key={i}
@@ -36,4 +36,4 @@ const FeaturesBento = () => {
   );
 };
 
-export default FeaturesBento;
+export default Grid2;

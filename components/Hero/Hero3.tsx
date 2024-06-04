@@ -9,8 +9,8 @@ const Header: FC = () => {
       <div className="text-center">
         <div className="md:mx-auto sm:text-center md:mb-12">
           <div className="flex-grow flex flex-col justify-center items-center">
-            <p className="uppercase tracking-widest mb-8 bg-white text-md text-center text- max-w-90 text-primary text-opacity-90">
-              CHOOSE where transactions meet simplicity
+            <p className="p-1 uppercase text-sm mb-11 bg-white text-center text-max-w-90 text-primary text-opacity-90 rounded-xl">
+              ENABLING RESTAURANTS WITH REAL GROWTH!
             </p>
             <h1 className="text-4xl max-w-7xl sm:text-6xl font-bold lg:text-6xl text-center tracking-wide">
               Revolutionising how Restaurants <br />
@@ -18,15 +18,15 @@ const Header: FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                 <Typewriter words={words} />
               </span>{" "}
-              to Grow
+              to drive Grow
             </h1>
-            <p className="mt-10 text-center text-lg text-neutral-500 max-w-4xl">
+            {/* <p className="mt-10 text-center text-lg text-neutral-500 max-w-4xl">
               Revolutionize your checkout experience with our sleek POS solution
               – CHOOSE where transactions meet simplicity, effortlessly.
-            </p>
+            </p> */}
           </div>
         </div>
-        <div className="flex justify-center mx-auto my-10 w-full max-w-screen-sm">
+        <div className="flex justify-center mx-auto my-21 w-full max-w-screen-sm">
           <EnrollInput buttonText="Join us" />
         </div>
       </div>

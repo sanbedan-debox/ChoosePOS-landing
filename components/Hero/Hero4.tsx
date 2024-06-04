@@ -24,7 +24,7 @@ const Heroopt3 = () => {
        *  0.2 to 0.03
        */}
       <div
-        className="h-screen w-full bg-black-100  bg-grid-white/[0.05] 
+        className="h-screen w-full bg-grid-white/[0.05] 
         absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
@@ -37,7 +37,7 @@ const Heroopt3 = () => {
 
       <div className="flex justify-center relative mt-20 mb-35 z-10 ">
         <div className="max-w-3xl md:max-w-5xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-md text-center text- max-w-90 text-primary text-opacity-90">
+          <p className="uppercase tracking-widest text-md text-center text-max-w-90 text-primary text-opacity-90">
             CHOOSE where transactions meet simplicity
           </p>
 
