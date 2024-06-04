@@ -57,7 +57,7 @@ export const HoverEffect = ({
                 "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
             }}
             className={cn(
-              "rounded-2xl h-44 w-full  overflow-hidden border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+              "rounded-2xl h-auto md:h-44 w-full  overflow-hidden border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
               className
             )}
           >
