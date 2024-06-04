@@ -10,6 +10,7 @@ import {
   Footertwo,
   FeaturesBento,
 } from "@/components";
+import Grid from "@/components/BentoGrid/grid";
 const Home: NextPage = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
         <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
         <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
           <div className="max-w-7xl w-full">
-            <FeaturesBento />
+            <Grid />
           </div>
         </div>
       </div>
