@@ -15,10 +15,8 @@ import StartSteps from "@/components/common/StartSteps";
 import TitleComp2 from "@/option2comps/titleComp2";
 import TitleComponent2 from "@/components/common/TitleComponent2";
 import Grid2 from "@/components/BentoGrid/grid2";
-import FeatureBoxes, {
-  CardHoverEffectDemo,
-} from "@/components/features/featbox";
-import FeatureBox from "@/components/features/featbox";
+import { CardHoverEffectDemo } from "@/components/features/featbox";
+
 const Home: NextPage = () => {
   return (
     <>
