@@ -88,6 +88,7 @@ export const BentoGridItem = ({
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
+          <div className="absolute inset-0 bg-black opacity-55"></div>
         </div>
         <div
           className={`absolute right-0 -bottom-5 ${
@@ -103,12 +104,12 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 6 && (
+        {/* {id === 6 && (
           // add background animation , remove the p tag
           // <BackgroundGradientAnimation>
           <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           // </BackgroundGradientAnimation>
-        )}
+        )} */}
 
         <div
           className={cn(
@@ -123,7 +124,7 @@ export const BentoGridItem = ({
           <div className={` text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
           </div>
-          <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-400 z-10">
+          <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-300 z-10">
             {description}
           </div>
 

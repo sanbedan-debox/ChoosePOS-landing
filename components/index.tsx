@@ -6,4 +6,4 @@ export { default as FAQnew } from "@/components/FAQ/new";
 export { default as SecFooter } from "@/components/secfooter";
 export { default as Footertwo } from "@/components/footer/index2";
 export { default as TitleComponent } from "@/components/common/TitleComponent";
-export { default as FeaturesBento } from "@/pages/BentoGrid/grid";
+export { default as FeaturesBento } from "@/components/BentoGrid/grid";
