@@ -35,7 +35,7 @@ const Heroopt3 = () => {
         />
       </div>
 
-      <div className="flex justify-center relative mt-20 mb-35 z-10 ">
+      <div className="flex justify-center relative mt-20 mb-12 md:mb-24 z-10 ">
         <div className="max-w-3xl md:max-w-5xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-md text-center text-max-w-90 text-primary text-opacity-90">
             CHOOSE where transactions meet simplicity

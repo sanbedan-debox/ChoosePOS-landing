@@ -5,7 +5,7 @@ const TitleComponent2: React.FC = () => {
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden mb-8 px-10 md:px-2 py-8 md:py-12 justify-center items-center group hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4 bg-white"
+        "row-span-1 relative overflow-hidden mb-8 md:mb-24 px-10 md:px-2 py-8 md:py-12 justify-center items-center group hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4 bg-white"
       )}
     >
       <div className="flex flex-col gap-6 max-w-full text-center px-4 md:px-0">

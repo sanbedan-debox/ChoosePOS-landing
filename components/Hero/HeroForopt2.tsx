@@ -5,7 +5,7 @@ const words = ["Data Insights", "Technology", "Marketing"];
 
 const Headeropt2: FC = () => {
   return (
-    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-35 mt-35 flex justify-center align-middle items-center">
+    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-6 md:mb-12 mt-35 flex justify-center align-middle items-center">
       <div
         className="h-screen w-full bg-grid-white/[0.05] 
         absolute top-0 left-0 flex items-center justify-center"

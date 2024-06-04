@@ -122,7 +122,7 @@ export const fadeIn = (
 });
 
 export const planetVariants = (
-  direction: "left" | "right",
+  direction: "left" | "right"
 ): { [key: string]: any } => ({
   hidden: {
     x: direction === "left" ? "-100%" : "100%",
@@ -175,7 +175,7 @@ export const footerVariants: { [key: string]: any } = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 0.2,
+      delay: 0.1,
     },
   },
 };

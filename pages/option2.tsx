@@ -9,7 +9,7 @@ import {
   FAQnew,
   Footertwo,
 } from "@/components";
-import Grid from "@/components/BentoGrid/grid";
+import Grid from "@/option2comps/BentoGrid/grid";
 import { CardHoverEffectDemo } from "@/components/features/featbox";
 import TitleComp2 from "@/option2comps/titleComp2";
 import TitleComponent2 from "@/components/common/TitleComponent2";

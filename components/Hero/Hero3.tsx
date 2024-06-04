@@ -5,7 +5,7 @@ const words = ["Data Insights", "Technology", "Marketing"];
 
 const Header: FC = () => {
   return (
-    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-35 mt-35 flex justify-center align-middle items-center">
+    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-6 md:mb-12 mt-35 flex justify-center align-middle items-center">
       <div className="text-center">
         <div className="md:mx-auto sm:text-center md:mb-12">
           <div className="flex-grow flex flex-col justify-center items-center">
@@ -20,10 +20,6 @@ const Header: FC = () => {
               </span>{" "}
               to drive Growth
             </h1>
-            {/* <p className="mt-10 text-center text-lg text-neutral-500 max-w-4xl">
-              Revolutionize your checkout experience with our sleek POS solution
-              – CHOOSE where transactions meet simplicity, effortlessly.
-            </p> */}
           </div>
         </div>
         <div className="flex justify-center mx-auto my-21 w-full max-w-screen-sm">

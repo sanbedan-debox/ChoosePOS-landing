@@ -10,7 +10,7 @@ const Grid = () => {
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-center md:justify-end",
-      img: "/tech.webp",
+      img: "/features/cutting-edge.webp",
       spareImg: "",
     },
     {
@@ -20,8 +20,8 @@ const Grid = () => {
         "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
-      titleClassName: "justify-center",
-      img: "/grid.svg",
+      titleClassName: "justify-center ",
+      img: "/features/delivery.webp",
       // img: "/party.jpg",
       spareImg: "",
     },
@@ -32,9 +32,10 @@ const Grid = () => {
         "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
-      titleClassName: "justify-center",
+      titleClassName: "justify-center ",
       // img: "/insight.jpg",
-      img: "/grid.svg",
+      // img: "/grid.svg",
+      img: "/features/data-insights.webp",
       spareImg: "",
     },
     {
@@ -44,10 +45,11 @@ const Grid = () => {
         "No questions asked coverage against customer disputes and chargebacks",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
-      titleClassName: "justify-center",
+      titleClassName: "justify-center ",
       spareImg: "",
       // img: "/disputes.jpg",
-      img: "/grid.svg",
+      // img: "/grid.svg",
+      img: "/features/disputes.webp",
     },
 
     {
@@ -60,7 +62,8 @@ const Grid = () => {
       // imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 rounded-lg ",
       // titleClassName: "justify-center md:justify-start lg:justify-center",
       titleClassName: "justify-center md:justify-end",
-      img: "/reports.webp",
+      // img: "/reports.webp",
+      img: "/features/reports.webp",
       spareImg: "",
     },
     {
@@ -77,7 +80,7 @@ const Grid = () => {
   return (
     <section
       id="feat"
-      className="mx-auto  px-4  lg:flex  flex-col items-center overflow-hidden bg-feature-bg mb-12 md:mb-24 "
+      className="mx-auto  px-4  lg:flex  flex-col items-center overflow-hidden bg-feature-bg mb-12  md:mb-24"
     >
       <div className="text-center z-20">
         <h2 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0  md:justify-center font-semibold">
