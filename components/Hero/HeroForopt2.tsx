@@ -5,15 +5,14 @@ const words = ["Data Insights", "Technology", "Marketing"];
 
 const Headeropt2: FC = () => {
   return (
-    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-6 md:mb-12 mt-35 flex justify-center align-middle items-center">
+    <div className="px-4 mx-auto md:px-24 lg:px-8 mb-6 md:mb-35 mt-35 flex justify-center align-middle items-center">
       <div
-        className="h-screen w-full bg-grid-white/[0.05] 
+        className="h-screen w-full bg-grid-white/[0.03] 
         absolute top-0 left-0 flex items-center justify-center"
       >
-        {/* Radial gradient for the container to give a faded look */}
         <div
           // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black
+          className="absolute pointer-events-none inset-0 flex items-center justify-center
           [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>

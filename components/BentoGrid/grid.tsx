@@ -65,7 +65,7 @@ const Grid = () => {
     },
     {
       id: 6,
-      title: "Know more",
+      title: "Join the Waitlist",
       description: "And do note that we are just getting started!",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",

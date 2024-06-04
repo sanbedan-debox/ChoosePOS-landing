@@ -86,7 +86,10 @@ export const BentoGridItem = ({
             />
           )}
           {id !== 6 ? (
-            <div className="h-full w-full absolute bg-black/30" />
+            <div
+              className="h-full w-full absolute"
+              style={{ backgroundColor: "rgba(0,0,0,0.35)" }}
+            />
           ) : null}
         </div>
         <div
