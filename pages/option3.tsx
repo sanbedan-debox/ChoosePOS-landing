@@ -1,37 +1,53 @@
+import React from "react";
 import { NextPage } from "next";
-
 import {
-  FAQnew,
-  FeatureSection,
-  Footertwo,
   Navbar,
+  Header,
+  FeatureSection,
   SecFooter,
+  Featurestwo,
+  FAQnew,
+  Footertwo,
 } from "@/components";
-import Heroopt3 from "@/components/Hero/Hero4";
 import Grid from "@/components/BentoGrid/grid";
-
+import { CardHoverEffectDemo } from "@/components/features/featbox";
+import TitleComp2 from "@/option2comps/titleComp2";
+import TitleComponent2 from "@/components/common/TitleComponent2";
+import Heroopt3 from "@/components/Hero/Hero4";
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <>
       <Navbar />
-      <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-        <div className="max-w-7xl w-full">
-          <Heroopt3 />
-          <Grid />
+      {/* <div className="footer-gradient  absolute w-full h-[200px] top-40 right-0 z-[-1]"></div> */}
+      {/* <Header /> */}
+      <Heroopt3 />
+      {/* <div className="max-w-7xl w-full mx-auto"> */}
+      <TitleComponent2 />
+      {/* </div> */}
+      {/* <HeroSecSection /> */}
+      <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
+      <div className="relative">
+        <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
+        <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+          <div className="max-w-7xl w-full">
+            <Grid />
+          </div>
         </div>
       </div>
-      <FeatureSection />
       <div className="relative">
         <div className="gradient-02 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>
       </div>
+      <CardHoverEffectDemo />
+
+      {/* <FeatureSection /> */}
       <div className="max-w-7xl mx-auto px-6 relative">
-        <FAQnew />
+        {/* <FAQnew /> */}
         <SecFooter />
 
         <div className="border-t py-2 mt-2 border-neutral-700"></div>
         <Footertwo />
       </div>
-    </div>
+    </>
   );
 };
 

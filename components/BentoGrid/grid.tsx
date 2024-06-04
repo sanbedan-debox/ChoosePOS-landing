@@ -21,7 +21,7 @@ const Grid = () => {
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-end ",
-      img: "",
+      img: "/grid.svg",
       // img: "/party.jpg",
       spareImg: "",
     },
@@ -34,7 +34,7 @@ const Grid = () => {
       imgClassName: "",
       titleClassName: "justify-end ",
       // img: "/insight.jpg",
-      img: "",
+      img: "/grid.svg",
       spareImg: "",
     },
     {
@@ -45,9 +45,9 @@ const Grid = () => {
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-end ",
-      spareImg: "/grid.svg",
+      spareImg: "",
       // img: "/disputes.jpg",
-      img: "",
+      img: "/grid.svg",
     },
 
     {
@@ -70,8 +70,8 @@ const Grid = () => {
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-      img: "",
-      spareImg: "/grid.svg",
+      img: "/grid.svg",
+      spareImg: "",
     },
   ];
   return (

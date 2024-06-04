@@ -8,15 +8,20 @@ import {
   Featurestwo,
   FAQnew,
   Footertwo,
-  FeaturesBento,
 } from "@/components";
 import Grid from "@/components/BentoGrid/grid";
+import { CardHoverEffectDemo } from "@/components/features/featbox";
+import TitleComp2 from "@/option2comps/titleComp2";
+import TitleComponent2 from "@/components/common/TitleComponent2";
 const Home: NextPage = () => {
   return (
     <>
       <Navbar />
       {/* <div className="footer-gradient  absolute w-full h-[200px] top-40 right-0 z-[-1]"></div> */}
       <Header />
+      {/* <div className="max-w-7xl w-full mx-auto"> */}
+      <TitleComponent2 />
+      {/* </div> */}
       {/* <HeroSecSection /> */}
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
       <div className="relative">
@@ -30,7 +35,9 @@ const Home: NextPage = () => {
       <div className="relative">
         <div className="gradient-02 absolute w-full h-[100px] sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] top-0 right-0 z-[-2]"></div>
       </div>
-      <FeatureSection />
+      <CardHoverEffectDemo />
+
+      {/* <FeatureSection /> */}
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* <FAQnew /> */}
         <SecFooter />

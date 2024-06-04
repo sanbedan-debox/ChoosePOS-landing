@@ -79,6 +79,17 @@
     transform: rotate(-53.13deg);
   }
 
+  .gradient-07 {
+    position: absolute;
+    width: 200px;
+    height: 438px;
+    right: 0;
+    bottom: 0;
+    background: #162cf1;
+    filter: blur(190px);
+    transform: rotate(-53.13deg);
+  }
+
   .gradient-05 {
     background: linear-gradient(
       180deg,
