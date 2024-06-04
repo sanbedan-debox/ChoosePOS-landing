@@ -1,7 +1,7 @@
 import { gridFeatItems } from "@/utils/constant";
 import { BentoGrid, BentoGridItem } from "./bento";
 
-const FeaturesBento = () => {
+const Grid = () => {
   return (
     <section
       id="feat"
@@ -36,4 +36,4 @@ const FeaturesBento = () => {
   );
 };
 
-export default FeaturesBento;
+export default Grid;
