@@ -22,7 +22,7 @@ const TitleComponent: React.FC = () => {
           <img
             src="/closeQb.svg"
             alt="Closing Quote"
-            className="absolute -right-16 -bottom-0 w-10 h-10 md:w-23 md:h-23 z-[-2]"
+            className="absolute -r  md:-right-16 md:-bottom-0 w-10 h-10 md:w-23 md:h-23 z-[-2]"
           />
         </div>
       </div>
