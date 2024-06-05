@@ -25,8 +25,7 @@ export const HoverEffect = ({
       )}
     >
       {features.map((item, idx) => (
-        <Link
-          href={""}
+        <div
           key={item.text}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -74,7 +73,7 @@ export const HoverEffect = ({
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );

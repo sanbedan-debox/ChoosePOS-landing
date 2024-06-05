@@ -4,6 +4,7 @@ import logo1 from "../../assets/logo/logoWhite.png";
 import { navItems } from "../../utils/constant";
 import Image from "next/image";
 import JoinUsButton from "../common/joinUsBtn";
+import Link from "next/link";
 
 interface NavItem {
   href: string;
@@ -26,21 +27,21 @@ const Navbar: FC = () => {
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <a onClick={closeDrawer} href="#">
+            <Link onClick={closeDrawer} href="/">
               <Image className="mr-2" src={logo1} alt="Logo" width={150} />
-            </a>
+            </Link>
           </div>
           <ul className="hidden lg:flex ml-14 text-lg space-x-12">
             {navItems.map((item: NavItem, index: number) => (
               <li key={index}>
-                <a href={item.href}>{item.label}</a>
+                <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#enroll">
+            <Link href="#enroll">
               <JoinUsButton text="Join the Waitlist" />
-            </a>
+            </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -56,15 +57,19 @@ const Navbar: FC = () => {
                   key={index}
                   className="text-xl hover:text-neutral-400 px-4 py-1 list-item-with-bullet"
                 >
-                  <a href={item.href} onClick={closeDrawer}>
+                  <Link href={item.href} onClick={closeDrawer}>
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="text-xl hover:text-neutral-400 px-4 py-1 list-item-with-bullet">
-                <a href="#enroll" className="text-white" onClick={closeDrawer}>
+                <Link
+                  href="#enroll"
+                  className="text-white"
+                  onClick={closeDrawer}
+                >
                   Enroll Now
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

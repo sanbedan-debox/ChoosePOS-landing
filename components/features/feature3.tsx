@@ -3,6 +3,7 @@ import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import EnrollInput from "../common/enrollInput";
+import Image from "next/image";
 
 const Featurebox = () => {
   return (
@@ -35,41 +36,6 @@ const Featurebox = () => {
                 image={feature.image} // Add image prop
               />
             ))}
-
-            {/* Anchor tab */}
-            {/* <li className="flex w-full flex-1 flex-col items-center justify-center transition duration-300 ease-in-out transform hover:scale-105">
-              <button className="relative inline-block w-full h-full py-2 px-6 rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary focus:text-secondary focus:bg-gray-200 text-white text-2xl md:text-4xl font-bold leading-loose transition duration-200">
-                Know More
-                <span className="absolute right-0 top-0 bottom-0 flex items-center justify-center pr-4 opacity-0 transition-opacity duration-200">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 stroke-current transform"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6v8m0 0l-4-4m4 4l4-4"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </li> */}
-            {/* <li className="flex w-full flex-1 flex-col justify-between items-center rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-2 md:p-6 transition duration-300 ease-in-out transform hover:scale-105 h-auto md:h-96">
-              <img
-                src="./f6.jpg"
-                alt="Enroll Now"
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
-              <h2
-                className="text-lg mt-2 mb-2 md:mb-0"
-                style={{ fontSize: "19px" }}
-              >
-                Join the Waitlist :)
-              </h2>
-              <EnrollInput buttonText={"Enroll Now"} />
-            </li> */}
 
             <style jsx>
               {`
@@ -105,7 +71,8 @@ type FeatureItemProps = {
 const FeatureItem = ({ title, description, image }: FeatureItemProps) => {
   return (
     <li className="flex w-full flex-1 flex-col justify-between items-start rounded-lg bg-primary-700 bg-primary bg-opacity-20 shadow-md p-2 md:p-6 transition duration-300 ease-in-out transform hover:scale-105 h-auto md:h-96">
-      <img
+      <Image
+        fill
         src={image}
         alt={title}
         className="w-full h-48 object-cover rounded-t-lg"

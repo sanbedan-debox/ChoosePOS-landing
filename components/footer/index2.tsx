@@ -1,35 +1,37 @@
+import Link from "next/link";
+
 const Footertwo = () => {
   return (
     <section className="">
       <div className="max-w-screen-xl px-4 pb-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
-            <a
+            <Link
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               Features
-            </a>
+            </Link>
           </div>
           <div className="px-5 py-2">
-            <a
+            <Link
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               FAQ
-            </a>
+            </Link>
           </div>
           <div className="px-5 py-2">
-            <a
+            <Link
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               About Us
-            </a>
+            </Link>
           </div>
         </nav>
         <div className="flex justify-center mt-8 space-x-6">
-          <a href="#" className="text-white hover:text-gray-500">
+          <Link href="#" className="text-white hover:text-gray-500">
             <span className="sr-only">Facebook</span>
             <svg
               className="w-6 h-6"
@@ -43,8 +45,8 @@ const Footertwo = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
-          <a href="#" className="text-white hover:text-gray-500">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-500">
             <span className="sr-only">Instagram</span>
             <svg
               className="w-6 h-6"
@@ -58,8 +60,8 @@ const Footertwo = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
-          <a href="#" className="text-white hover:text-gray-500">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-500">
             <span className="sr-only">Twitter</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +80,7 @@ const Footertwo = () => {
               <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
               <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
             </svg>
-          </a>
+          </Link>
         </div>
         <p className="mt-8 text-base leading-6 text-center text-white">
           © 2024 CHOOSE, Inc. All rights reserved.
