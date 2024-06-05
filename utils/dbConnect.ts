@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
 const MONGODB_URI: any = process.env.NEXT_PUBLIC_MONGO_URI;
-// P14vaXVvwEw9p2N5
-// sanbedan
 
 if (!MONGODB_URI) {
   throw new Error(

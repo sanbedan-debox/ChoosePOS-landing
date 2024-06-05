@@ -1,14 +1,7 @@
 import {
-  BotMessageSquare,
-  BatteryCharging,
-  Fingerprint,
-  ShieldHalf,
-  PlugZap,
-  GlobeLock,
   LayoutDashboard,
   MonitorSmartphone,
   CircleGauge,
-  HandCoins,
   Crown,
   MessageCircleHeart,
   BadgeDollarSign,
@@ -18,12 +11,6 @@ interface NavItem {
   label: string;
   href: string;
 }
-
-// interface PricingOption {
-//   title: string;
-//   price: string;
-//   features: string[];
-// }
 
 interface Feature {
   icon: JSX.Element;
@@ -70,40 +57,6 @@ export const navItems: NavItem[] = [
 //   },
 // ];
 
-export const explore = [
-  {
-    id: "world-1",
-    desc: "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
-    imgUrl: "/ex1.jpg",
-    title: "Cutting-edge Online Ordering",
-  },
-  {
-    id: "world-2",
-    desc: "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
-    imgUrl: "/ex2.jpg",
-    title: "Seamless 3rd Party integrations",
-  },
-  {
-    id: "world-3",
-    desc: "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
-    imgUrl: "/ex3.jpg",
-    title: "Data Insights like never before",
-  },
-  {
-    id: "world-4",
-    desc: "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
-
-    imgUrl: "/ex4.jpg",
-    title: "Reports that drive Business",
-  },
-  {
-    id: "world-5",
-    desc: "No questions asked coverage against customer disputes and chargebacks",
-
-    imgUrl: "/ex5.jpg",
-    title: "Protection against Disputes",
-  },
-];
 export const faqs = [
   {
     question: "What is a Point of Sale (POS) system?",
@@ -131,94 +84,6 @@ export const faqs = [
       "When choosing a POS system, consider features such as ease of use, compatibility with your business type, inventory management capabilities, integration with other software (such as accounting or ecommerce platforms), security features for processing payments, customer support options, and scalability to accommodate your business's growth.",
   },
   // Add more FAQs as needed
-];
-
-// FEATURES SECTION
-export const FEATURESrow1 = [
-  {
-    title: "Cutting-edge Online Ordering",
-    icon: "/map.svg",
-    variant: "green",
-    description:
-      "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
-    image: "/tech.jpg",
-  },
-  {
-    title: "Seamless 3rd Party integrations",
-    icon: "/map.svg",
-    variant: "green",
-    description:
-      "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
-    image: "/party.jpg",
-  },
-  {
-    title: "Data Insights like never before",
-    icon: "/calendar.svg",
-    variant: "green",
-    description:
-      "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
-    image: "/insight.jpg",
-  },
-];
-export const FEATURErow2 = [
-  {
-    title: "Reports that drive Business",
-    icon: "/tech.svg",
-    variant: "green",
-    description:
-      "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
-    image: "/report.jpg",
-  },
-  {
-    title: "Protection against Disputes",
-    icon: "/location.svg",
-    variant: "orange",
-    description:
-      "No questions asked coverage against customer disputes and chargebacks",
-    image: "/disputes.jpg",
-  },
-];
-export const FEATURES = [
-  {
-    title: "Cutting-edge Online Ordering",
-    icon: "/map.svg",
-    variant: "green",
-    description:
-      "Track the entire digital journey every step of the way and boost your Online Takeaway sales and Cart conversions",
-    image: "/f1.jpg",
-  },
-  {
-    title: "Seamless 3rd Party integrations",
-    icon: "/map.svg",
-    variant: "green",
-    description:
-      "Manage and update the 3rd Party menu on the fly with precise reports and settlements like never before",
-    image: "/f2.jpg",
-  },
-  {
-    title: "Data Insights like never before",
-    icon: "/calendar.svg",
-    variant: "green",
-    description:
-      "Get real time insights of what is working and what is not on your menu to drive the right marketing strategies",
-    image: "/f3.jpg",
-  },
-  {
-    title: "Reports that drive Business",
-    icon: "/tech.svg",
-    variant: "green",
-    description:
-      "Reports curated and built with Restaurant owners to get what really matters and save the manual efforts",
-    image: "/f4.jpg",
-  },
-  {
-    title: "Protection against Disputes",
-    icon: "/location.svg",
-    variant: "orange",
-    description:
-      "No questions asked coverage against customer disputes and chargebacks",
-    image: "/jojo.jpg",
-  },
 ];
 
 export const features: Feature[] = [
@@ -406,96 +271,5 @@ export const gridFeatItems2 = [
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
     spareImg: "/grid.svg",
-  },
-];
-
-export const benefits = [
-  {
-    id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
-    // iconUrl: benefitIcon1,
-    // imageUrl: benefitImage2,
-  },
-  {
-    id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
-    // iconUrl: benefitIcon2,
-    // imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
-    // iconUrl: benefitIcon3,
-    // imageUrl: benefitImage2,
-  },
-  {
-    id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    // iconUrl: benefitIcon4,
-    // imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    // iconUrl: benefitIcon1,
-    // imageUrl: benefitImage2,
-  },
-  {
-    id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    // iconUrl: benefitIcon2,
-    // imageUrl: benefitImage2,
-  },
-];
-
-import {
-  AlarmClockOff,
-  ArrowDownNarrowWide,
-  ArrowUpNarrowWide,
-  LucideIcon,
-} from "lucide-react";
-
-interface IInfoCard {
-  title: string;
-  icon: LucideIcon;
-  bodyText: string;
-  id: number;
-}
-
-export const infoCards: IInfoCard[] = [
-  {
-    title: "Increased Sales",
-    bodyText:
-      " Insightful's predictive analytics identify high-value prospects for targeted pitches, boosting conversion rates and sales by up to 20%.",
-    icon: ArrowUpNarrowWide,
-    id: 1,
-  },
-  {
-    title: "No Time Wasted",
-    bodyText:
-      "Insightful automates personalized content creation, freeing up sales reps' time for revenue-focused activities and increased productivity.",
-    icon: AlarmClockOff,
-    id: 2,
-  },
-  {
-    title: "Decreased Churn",
-    bodyText:
-      " Insightful's AI lead engagement and renewal tools reduce customer churn by up to 30% through consistent outreach and retention opportunities.",
-    icon: ArrowDownNarrowWide,
-    id: 3,
   },
 ];

@@ -1,5 +1,3 @@
-//OPT 1,2,3,4
-
 import { FC, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -31,6 +29,7 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
     message: string;
     type: "success" | "error";
   } | null>(null);
+  const [buttonError, setButtonError] = useState(false);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,9 +38,9 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
 
   const handleSubmit = async () => {
     if (!validateEmail(email)) {
-      setToast({ message: "Invalid email address", type: "error" });
+      setButtonError(true);
       setTimeout(() => {
-        setToast(null);
+        setButtonError(false);
       }, 3000);
       return;
     }
@@ -69,7 +68,7 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
       setLoading(false);
       setTimeout(() => {
         setToast(null);
-      }, 3000); // Hide toast after 3 seconds
+      }, 3000);
     }
   };
 
@@ -103,7 +102,13 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
       {/* Button to submit email */}
       <button
         type="button"
-        className="h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform bg-primary rounded-full hover:bg-white hover:text-primary focus:outline-none focus:bg-blue-400 md:w-auto w-32 flex items-center justify-center"
+        className={`h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform rounded-full focus:outline-none md:w-auto w-32 flex items-center justify-center ${
+          buttonError
+            ? "bg-red-500"
+            : loading
+            ? "bg-gray-400"
+            : "bg-primary hover:bg-white hover:text-primary"
+        }`}
         onClick={handleSubmit}
         disabled={loading}
       >
