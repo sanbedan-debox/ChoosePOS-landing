@@ -1,6 +1,3 @@
-import { useState } from "react";
-
-import animationData from "@/utils/confetti.json";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 
@@ -44,23 +41,6 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
-
   return (
     <div
       className={cn(
@@ -108,26 +88,12 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
           <div className={` text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
           </div>
           <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-300 z-10">
             {description}
           </div>
-
-          {id === 6 && (
-            <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              ></div>
-            </div>
-          )}
         </div>
       </div>
     </div>

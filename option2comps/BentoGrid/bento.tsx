@@ -1,6 +1,3 @@
-import { useState } from "react";
-
-import animationData from "@/utils/confetti.json";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -30,7 +27,6 @@ export const BentoGridItem = ({
   id,
   title,
   description,
-  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -45,8 +41,6 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false);
-
   const router = useRouter();
 
   return (
@@ -116,16 +110,6 @@ export const BentoGridItem = ({
           <div className=" font-extralight md:max-w-screen-md md:text-xs lg:text-base text-sm text-neutral-300 z-10">
             {description}
           </div>
-
-          {id === 6 && (
-            <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              ></div>
-            </div>
-          )}
         </div>
       </div>
     </div>

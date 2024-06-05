@@ -10,43 +10,6 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .gradient-hero {
-    @apply bg-gradient-to-r from-primary to-secondary;
-    filter: blur(125px);
-  }
-
-  .gradient-feature {
-    @apply bg-gradient-to-r from-secondary to-accent;
-    filter: blur(175px);
-  }
-
-  .gradient-footer {
-    @apply bg-gradient-to-r from-primary to-secondary;
-    filter: blur(150px);
-  }
-
-  .gradient-01 {
-    background-image: linear-gradient(
-      270deg,
-      hsl(295deg 76% 51%) 0%,
-      hsl(284deg 70% 73%) 26%,
-      hsl(257deg 70% 86%) 39%,
-      hsl(202deg 92% 90%) 50%,
-      hsl(215deg 77% 81%) 61%,
-      hsl(221deg 73% 70%) 74%,
-      hsl(220deg 76% 51%) 100%
-    );
-    filter: blur(125px);
-  }
-
-  .hero-gradient {
-    background: linear-gradient(97.86deg, var 0%, #34acc7 53.65%, #445ef3 100%);
-  }
-
   .gradient-02 {
     position: absolute;
     width: 200px;
@@ -55,16 +18,6 @@
     right: 0px;
     background: #162cf1;
     filter: blur(190px);
-  }
-  .gradient-03 {
-    background: linear-gradient(
-      135deg,
-      rgba(45, 72, 152, 0.15),
-      #162cf1,
-      rgba(45, 72, 152, 0.15)
-    );
-    filter: blur(300px);
-    transform: rotate(-114.2deg);
   }
 
   .gradient-04 {
@@ -77,54 +30,12 @@
     filter: blur(190px);
     transform: rotate(-53.13deg);
   }
-
-  .gradient-07 {
-    position: absolute;
-    width: 200px;
-    height: 438px;
-    right: 0;
-    bottom: 0;
-    background: #162cf1;
-    filter: blur(190px);
-    transform: rotate(-53.13deg);
-  }
-
-  .gradient-05 {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.04) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  .footer-gradient {
-    position: absolute;
-    width: 200px; /* Adjust width as needed */
-    height: 20px; /* Adjust height as needed */
-    right: 100;
-    bottom: 0;
-    background: linear-gradient(
-      90deg,
-      #2b2bd2,
-      #307fa1
-    ); /* Adjust gradient colors as needed */
-    filter: blur(150px);
-  }
-}
-
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1); /* Background color with opacity */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow */
 }
 
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
-}
-
-.accordion-content.max-h-96 {
-  max-height: 24rem; /* Adjust this value as needed */
 }
 
 .backdrop-blur-xl {
