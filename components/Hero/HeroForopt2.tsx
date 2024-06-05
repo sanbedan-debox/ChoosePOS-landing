@@ -20,9 +20,6 @@ const Headeropt2: FC = () => {
       <div className="text-center">
         <div className="md:mx-auto sm:text-center md:mb-12">
           <div className="flex-grow flex flex-col justify-center items-center">
-            <p className="p-1 uppercase text-sm mb-11 bg-white text-center text-max-w-90 text-primary text-opacity-90 rounded-xl">
-              ENABLING RESTAURANTS WITH REAL GROWTH!
-            </p>
             <h1 className="text-4xl max-w-7xl sm:text-6xl font-bold lg:text-6xl text-center tracking-wide">
               Revolutionising how Restaurants <br />
               use{" "}
@@ -38,7 +35,7 @@ const Headeropt2: FC = () => {
           </div>
         </div>
         <div className="flex justify-center mx-auto my-21 w-full max-w-screen-sm">
-          <EnrollInput buttonText="Join us" />
+          <EnrollInput buttonText="Submit" />
         </div>
       </div>
     </div>

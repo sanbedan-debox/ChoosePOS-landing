@@ -39,7 +39,7 @@ const SecFooter: React.FC = () => (
             </div>
           </div>
           <div className="flex justify-center w-[600px]">
-            <EnrollInput buttonText="Join us" />
+            <EnrollInput buttonText="Submit" />
           </div>
         </div>
       </motion.div>

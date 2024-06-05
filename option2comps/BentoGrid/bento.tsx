@@ -3,6 +3,7 @@ import { useState } from "react";
 import animationData from "@/utils/confetti.json";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const BentoGrid = ({
   className,
@@ -61,6 +62,8 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
+  const router = useRouter();
+
   return (
     <div
       className={cn(
@@ -82,7 +85,7 @@ export const BentoGridItem = ({
               fill
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
           {id !== 6 ? (
@@ -112,6 +115,11 @@ export const BentoGridItem = ({
             titleClassName,
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
+          onClick={() => {
+            if (id === 6) {
+              router.push("#enroll");
+            }
+          }}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
 

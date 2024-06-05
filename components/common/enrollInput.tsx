@@ -87,7 +87,7 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
         </div>
         {/* Input field for email */}
         <input
-          className="flex-1 w-full h-10 px-4 py-2 m-1 pl-10 text-white placeholder:text-xs md:placeholder:text-lg placeholder-neutral-400 bg-transparent border-none appearance-none focus:outline-none focus:placeholder-transparent focus:ring-0"
+          className="flex-1 w-full h-10 px-4 py-2 m-1 pl-10 text-white placeholder:text-sm md:placeholder:text-lg placeholder-neutral-400 bg-transparent border-none appearance-none focus:outline-none focus:placeholder-transparent focus:ring-0"
           placeholder="Join the waitlist"
           type="email"
           id="email"
