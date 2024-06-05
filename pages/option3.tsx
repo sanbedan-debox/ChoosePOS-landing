@@ -14,6 +14,7 @@ import { CardHoverEffectDemo } from "@/components/features/featbox";
 import TitleComp2 from "@/option2comps/titleComp2";
 import TitleComponent2 from "@/components/common/TitleComponent2";
 import Heroopt3 from "@/components/Hero/Hero4";
+import TitleCompF from "@/components/common/TitleCompF";
 const Home: NextPage = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
       {/* <Header /> */}
       <Heroopt3 />
       {/* <div className="max-w-7xl w-full mx-auto"> */}
-      <TitleComponent2 />
+      <TitleCompF />
       {/* </div> */}
       {/* <HeroSecSection /> */}
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>

@@ -9,19 +9,19 @@ import {
   FAQnew,
   Footertwo,
 } from "@/components";
-import Grid from "@/option2comps/BentoGrid/grid";
+import Grid from "@/components/BentoGrid/grid";
 import { CardHoverEffectDemo } from "@/components/features/featbox";
 import TitleComp2 from "@/option2comps/titleComp2";
 import TitleComponent2 from "@/components/common/TitleComponent2";
-import Headeropt2 from "@/components/Hero/HeroForopt2";
+import TitleCompopt2 from "@/components/common/TitleCompopt2";
 const Home: NextPage = () => {
   return (
     <>
       <Navbar />
       {/* <div className="footer-gradient  absolute w-full h-[200px] top-40 right-0 z-[-1]"></div> */}
-      <Headeropt2 />
+      <Header />
       {/* <div className="max-w-7xl w-full mx-auto"> */}
-      <TitleComponent2 />
+      <TitleCompopt2 />
       {/* </div> */}
       {/* <HeroSecSection /> */}
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>

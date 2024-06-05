@@ -9,24 +9,30 @@ import {
   FAQnew,
   Footertwo,
 } from "@/components";
-import Grid from "@/components/BentoGrid/grid";
+import Grid from "@/option2comps/BentoGrid/grid";
 import { CardHoverEffectDemo } from "@/components/features/featbox";
 import TitleComp2 from "@/option2comps/titleComp2";
 import TitleComponent2 from "@/components/common/TitleComponent2";
+import Headeropt2 from "@/components/Hero/HeroForopt2";
+import TitleCompFinal from "@/components/common/TitleComponentFinal";
+import TitleCompF from "@/components/common/TitleCompF";
+import TitleCompopt1 from "@/components/common/TitleComponentOpt1";
+import TitleCompopt2 from "@/components/common/TitleCompopt2";
 const Home: NextPage = () => {
   return (
     <>
       <Navbar />
       {/* <div className="footer-gradient  absolute w-full h-[200px] top-40 right-0 z-[-1]"></div> */}
-      <Header />
+      <Headeropt2 />
       {/* <div className="max-w-7xl w-full mx-auto"> */}
-      <TitleComponent2 />
+      <TitleCompopt1 />
+
       {/* </div> */}
       {/* <HeroSecSection /> */}
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
       <div className="relative">
         <div className="gradient-04 absolute w-full h-[200px] top-0 right-0 z-[-2]"></div>
-        <div className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+        <div className="relative flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
           <div className="max-w-7xl w-full">
             <Grid />
           </div>
