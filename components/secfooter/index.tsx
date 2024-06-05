@@ -1,11 +1,9 @@
-// export default SecFooter; // Export Footer component
 import React from "react"; // Import React
 import { motion } from "framer-motion"; // Import motion from framer-motion
 
 import { footerVariants } from "../../utils/motion"; // Import footerVariants from motion utilities
 import EnrollInput from "../common/enrollInput";
 
-// Define Footer component
 const SecFooter: React.FC = () => (
   <>
     <footer className="relative" id="enroll">

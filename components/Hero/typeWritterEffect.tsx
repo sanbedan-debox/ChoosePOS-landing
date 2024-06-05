@@ -1,3 +1,5 @@
+// OPT HERO ,HERO2
+
 import React, { FC, useEffect, useState } from "react";
 
 interface TypewriterProps {

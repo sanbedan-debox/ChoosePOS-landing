@@ -1,3 +1,5 @@
+//HERO3
+
 "use client";
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";

@@ -1,7 +1,7 @@
+//OPT 4
+
 import { cn } from "@/utils/cn";
 import React from "react";
-import darshan from "../../assets/darshan.jpg";
-import Image from "next/image";
 
 const TitleCompFinal: React.FC = () => {
   return (

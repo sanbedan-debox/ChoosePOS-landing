@@ -1,6 +1,6 @@
+//OPT 3
+
 import React from "react";
-import darshan from "../../assets/darshan.jpg";
-import Image from "next/image";
 import group4 from "../../assets/jpg/group4.webp";
 
 const TitleCompF: React.FC = () => {

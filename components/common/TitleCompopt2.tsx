@@ -3,7 +3,7 @@ import darshan from "../../assets/darshan.jpg";
 import Image from "next/image";
 import group5 from "../../assets/jpg/group5.webp";
 
-const TitleCompopt2: React.FC = () => {
+const TitleComponent2: React.FC = () => {
   return (
     <div className="mb-12 md:mb-35">
       <div className="relative row-span-1 overflow-hidden mb-8 md:mb-24 px-10 md:px-2 py-8 md:py-12 justify-center items-center group hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col space-y-4">
@@ -48,4 +48,4 @@ const TitleCompopt2: React.FC = () => {
   );
 };
 
-export default TitleCompopt2;
+export default TitleComponent2;
