@@ -1,26 +1,9 @@
 import { FC, useState } from "react";
-import { createPortal } from "react-dom";
+import { Toast } from "./Toast";
 
 interface EnrollInputProps {
   buttonText: string;
 }
-
-const Toast: FC<{ message: string; type: "success" | "error" }> = ({
-  message,
-  type,
-}) => {
-  return createPortal(
-    <div
-      className={`fixed bottom-4 right-4 p-4 rounded-lg text-white ${
-        type === "success" ? "bg-green-500" : "bg-red-500"
-      }`}
-      style={{ zIndex: 1000 }}
-    >
-      {message}
-    </div>,
-    document.body
-  );
-};
 
 const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
   const [email, setEmail] = useState("");
@@ -32,8 +15,9 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
   const [buttonError, setButtonError] = useState(false);
 
   const validateEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
+    const regex: RegExp =
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
+    return regex.test(email);
   };
 
   const handleSubmit = async () => {
