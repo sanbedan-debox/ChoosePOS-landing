@@ -1,5 +1,4 @@
 //OPT 1
-
 import React from "react";
 import { NextPage } from "next";
 import { Navbar, SecFooter, Footertwo } from "@/components";
