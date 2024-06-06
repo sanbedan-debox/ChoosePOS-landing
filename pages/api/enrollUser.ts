@@ -13,7 +13,7 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     try {
-      const { email, name }: WaitlistEmailData = req.body;
+      const { email, name, phoneNumber }: WaitlistEmailData = req.body;
 
       const transporter = nodemailer.createTransport({
         host: "sandbox.smtp.mailtrap.io",
@@ -28,7 +28,7 @@ export default async function handler(
         from: "sanebdan9989@gmail.com",
         to: email,
         subject: "Welcome to Our Waitlist!",
-        html: generateWaitlistEmail({ name, email }),
+        html: generateWaitlistEmail({ name, email, phoneNumber }),
       });
 
       await dbConnect();
