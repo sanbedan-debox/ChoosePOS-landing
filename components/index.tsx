@@ -7,3 +7,4 @@ export { default as Hero } from "@/components/Hero/Hero";
 export { default as TitleComponent1 } from "@/components/common/TitleComponentOpt1";
 export { default as Grid } from "@/components/BentoGrid/grid";
 export { default as CardHoverEffectDemo } from "@/components/Features/featbox";
+export { default as FAQnew } from "@/components/Faq/new";
