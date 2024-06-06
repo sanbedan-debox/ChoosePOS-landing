@@ -20,7 +20,7 @@ interface Feature {
 
 export const navItems: NavItem[] = [
   { label: "Features", href: "#feat" },
-  { label: "FAQ", href: "#faq" },
+  // { label: "FAQ", href: "#faq" },
   { label: "About Us", href: "#" },
 ];
 

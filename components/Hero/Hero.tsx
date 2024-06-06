@@ -3,6 +3,7 @@
 import { FC } from "react";
 import EnrollInput from "../common/enrollInput";
 import Typewriter from "./typeWritterEffect";
+import Modalbtn from "../common/modalBtn";
 const words = ["Data Insights", "Technology", "Marketing"];
 
 const Hero: FC = () => {
@@ -38,6 +39,7 @@ const Hero: FC = () => {
         </div>
         <div className="flex justify-center mx-auto my-21 w-full max-w-screen-sm">
           <EnrollInput buttonText="Submit" />
+          {/* <Modalbtn text={"Join Us"} /> */}
         </div>
       </div>
     </div>

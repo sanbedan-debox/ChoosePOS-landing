@@ -1,8 +1,8 @@
 import React from "react";
 import { NextPage } from "next";
 import { Navbar, Header, SecFooter, Footertwo } from "@/components";
-import Grid from "@/components/BentoGrid/grid";
-import { CardHoverEffectDemo } from "@/components/features/featbox";
+import Grid from "@/components/BentoGrid2/grid";
+import { CardHoverEffectDemo } from "@/components/Features/featbox";
 import TitleComponent2 from "@/components/common/TitleComponent2";
 const Home: NextPage = () => {
   return (

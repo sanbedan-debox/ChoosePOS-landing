@@ -3,8 +3,8 @@
 import React from "react";
 import { NextPage } from "next";
 import { Navbar, SecFooter, Footertwo } from "@/components";
-import Grid from "@/option2comps/BentoGrid/grid";
-import { CardHoverEffectDemo } from "@/components/features/featbox";
+import Grid from "@/components/BentoGrid/grid";
+import { CardHoverEffectDemo } from "@/components/Features/featbox";
 
 import TitleComponent1 from "@/components/common/TitleComponentOpt1";
 import Hero from "@/components/Hero/Hero";

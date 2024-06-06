@@ -3,8 +3,8 @@ import { useState, FC } from "react";
 import logo1 from "../../assets/logo/logoWhite.png";
 import { navItems } from "../../utils/constant";
 import Image from "next/image";
-import JoinUsButton from "../common/joinUsBtn";
 import Link from "next/link";
+import Modalbtn from "../common/modalBtn";
 
 interface NavItem {
   href: string;
@@ -39,9 +39,10 @@ const Navbar: FC = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <Link href="#enroll">
+            {/* <Link href="#enroll">
               <JoinUsButton text="Join the Waitlist" />
-            </Link>
+            </Link> */}
+            <Modalbtn text={"Enroll Now"} emailp="" />
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -50,7 +51,7 @@ const Navbar: FC = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 top-12 bg-primary bg-opacity-90 w-full px-2 py-1 min-h-screen flex flex-col text-right items-end lg:hidden">
+          <div className="fixed right-0 z-20 top-12 bg-black  w-full px-2 py-1 h-svh flex flex-col text-right items-end lg:hidden">
             <ul className="mt-5">
               {navItems.map((item: NavItem, index: number) => (
                 <li

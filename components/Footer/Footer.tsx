@@ -13,14 +13,14 @@ const Footertwo = () => {
               Features
             </Link>
           </div>
-          <div className="px-5 py-2">
+          {/* <div className="px-5 py-2">
             <Link
               href="#"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               FAQ
             </Link>
-          </div>
+          </div> */}
           <div className="px-5 py-2">
             <Link
               href="#"

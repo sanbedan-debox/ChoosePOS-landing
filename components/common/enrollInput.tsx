@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { Toast } from "./Toast";
+import Modalbtn from "./modalBtn";
 
 interface EnrollInputProps {
   buttonText: string;
@@ -13,48 +14,6 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
     type: "success" | "error";
   } | null>(null);
   const [buttonError, setButtonError] = useState(false);
-
-  const validateEmail = (email: string) => {
-    const regex: RegExp =
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
-    return regex.test(email);
-  };
-
-  const handleSubmit = async () => {
-    if (!validateEmail(email)) {
-      setButtonError(true);
-      setTimeout(() => {
-        setButtonError(false);
-      }, 3000);
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const response = await fetch("/api/enrollUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setToast({ message: "Email sent successfully", type: "success" });
-        setEmail(""); // Clear the email field
-      } else {
-        setToast({ message: "Failed to send email", type: "error" });
-      }
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      setToast({ message: "Failed to send email", type: "error" });
-    } finally {
-      setLoading(false);
-      setTimeout(() => {
-        setToast(null);
-      }, 3000);
-    }
-  };
 
   return (
     <div className="flex rounded-full shadow-sm w-full bg-secondary bg-opacity-20 p-1">
@@ -70,7 +29,6 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
           </svg>
         </div>
-        {/* Input field for email */}
         <input
           className="flex-1 w-full h-10 px-4 py-2 m-1 pl-10 text-white placeholder:text-sm md:placeholder:text-lg placeholder-neutral-400 bg-transparent border-none appearance-none focus:outline-none focus:placeholder-transparent focus:ring-0"
           placeholder="Join the waitlist"
@@ -83,44 +41,7 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
         />
       </div>
 
-      {/* Button to submit email */}
-      <button
-        type="button"
-        className={`h-10 px-4 py-2 m-1 text-white transition-colors duration-300 transform rounded-full focus:outline-none md:w-auto w-32 flex items-center justify-center ${
-          buttonError
-            ? "bg-red-500"
-            : loading
-            ? "bg-gray-400"
-            : "bg-primary hover:bg-white hover:text-primary"
-        }`}
-        onClick={handleSubmit}
-        disabled={loading}
-      >
-        {loading ? (
-          <svg
-            className="animate-spin h-5 w-5 text-secondary"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            ></circle>
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v8H4z"
-            ></path>
-          </svg>
-        ) : (
-          buttonText
-        )}
-      </button>
+      <Modalbtn text={buttonText} emailp={email} />
       {toast && <Toast message={toast.message} type={toast.type} />}
     </div>
   );
