@@ -2,7 +2,7 @@
 
 import { HoverEffect } from "../common/card-hover-effect";
 
-export function CardHoverEffectDemo() {
+const CardHoverEffectDemo: React.FC = () => {
   return (
     <section
       id="feat"
@@ -22,4 +22,6 @@ export function CardHoverEffectDemo() {
       </div>
     </section>
   );
-}
+};
+
+export default CardHoverEffectDemo;

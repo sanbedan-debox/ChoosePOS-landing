@@ -1,10 +1,14 @@
 import React from "react";
 import { NextPage } from "next";
-import { Navbar, SecFooter, Footertwo } from "@/components";
 import Grid from "@/components/BentoGrid/grid";
-import { CardHoverEffectDemo } from "@/components/Features/featbox";
 import TitleCompFinal from "@/components/common/TitleComponentFinal";
 import Hero from "@/components/Hero/Hero";
+import {
+  CardHoverEffectDemo,
+  Footertwo,
+  Navbar,
+  SecFooter,
+} from "@/components";
 const Home: NextPage = () => {
   return (
     <>
