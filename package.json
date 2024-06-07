@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
     "@next/font": "^14.2.3",
     "@react-email/components": "^0.0.19",
     "@tabler/icons-react": "^3.5.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
+    "headlessui": "^0.0.0",
     "lucide-react": "^0.379.0",
     "mini-svg-data-uri": "^1.4.4",
     "mongoose": "^8.4.1",
@@ -24,6 +26,7 @@
     "react": "18.2.0",
     "react-dom": "^18",
     "react-email": "^2.1.4",
+    "react-icons": "^5.2.1",
     "resend": "^3.2.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",

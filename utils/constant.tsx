@@ -273,3 +273,8 @@ export const gridFeatItems2 = [
     spareImg: "/grid.svg",
   },
 ];
+
+export const navData = [
+  { _id: 102, title: "Features", href: "#feat" },
+  { _id: 101, title: "About Us", href: "/" },
+];

@@ -10,11 +10,13 @@ import {
   SecFooter,
   TitleComponent1,
 } from "@/components";
+import Header from "@/components/Navbar/navbartry";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <Header />
+      {/* <Navbar /> */}
       <Hero />
       <TitleComponent1 />
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
