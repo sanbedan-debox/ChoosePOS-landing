@@ -1,19 +1,20 @@
 import { FC, useState } from "react";
 import { Toast } from "./Toast";
 import Modalbtn from "./modalBtn";
+import useStore from "@/store/store";
 
 interface EnrollInputProps {
   buttonText: string;
 }
 
 const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
-  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<{
     message: string;
     type: "success" | "error";
   } | null>(null);
   const [buttonError, setButtonError] = useState(false);
+  const { emailp, setEmailp } = useStore();
 
   return (
     <div className="flex rounded-full shadow-sm w-full bg-secondary bg-opacity-20 p-1">
@@ -35,13 +36,13 @@ const EnrollInput: FC<EnrollInputProps> = ({ buttonText }) => {
           type="email"
           id="email"
           required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={emailp}
+          onChange={(e) => setEmailp(e.target.value)}
           disabled={loading}
         />
       </div>
 
-      <Modalbtn text={buttonText} emailp={email} />
+      <Modalbtn text={buttonText} />
       {toast && <Toast message={toast.message} type={toast.type} />}
     </div>
   );

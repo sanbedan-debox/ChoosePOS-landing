@@ -1,5 +1,5 @@
 //OPT 1
-import React from "react";
+import React, { useEffect } from "react";
 import { NextPage } from "next";
 import {
   CardHoverEffectDemo,
@@ -11,8 +11,20 @@ import {
   TitleComponent1,
 } from "@/components";
 import Header from "@/components/Navbar/navbartry";
+import ModalPopUp from "@/components/common/enrollModal";
+import useStore from "@/store/store";
+import { Toast } from "@/components/common/Toast";
 
 const Home: NextPage = () => {
+  const { isModalOpen, toggleModal, toast } = useStore();
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isModalOpen]);
+
   return (
     <>
       <Header />
@@ -41,6 +53,10 @@ const Home: NextPage = () => {
         <div className="border-t py-2 mt-2 border-neutral-700"></div>
         <Footertwo />
       </div>
+
+      <div></div>
+      {isModalOpen && <ModalPopUp />}
+      {toast && <Toast message={toast.message} type={toast.type} />}
     </>
   );
 };

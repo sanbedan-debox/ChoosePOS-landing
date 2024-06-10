@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 py-3 backdrop-blur-xl border-b border-neutral-700/80">
+    <header className="sticky top-0 z-30 py-3 backdrop-blur-xl border-b border-neutral-700/80">
       <nav>
         <Container className="relative z-50 flex justify-between px-4">
           {/* Logo */}
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           {/* Buttons */}
           <div className="flex items-center gap-6">
             <div className="hidden lg:flex lg:gap-10 items-center">
-              <Modalbtn text={"Join Us"} emailp="" />
+              <Modalbtn text={"Sign Up"} emailp="" />
             </div>
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
@@ -104,7 +104,13 @@ const Header: React.FC = () => {
                               </Link>
                             ))}
                           </div>
-                          <div className="mt-4 flex flex-col items-center">
+                          <div
+                            className="mt-4 flex flex-col items-center"
+                            onClick={() => {
+                              handleLinkClick();
+                              close();
+                            }}
+                          >
                             <Modalbtn text={"Join Us"} emailp="" />
                           </div>
                         </Popover.Panel>

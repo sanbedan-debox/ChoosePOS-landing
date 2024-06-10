@@ -51,7 +51,7 @@ export const BentoGridItem = ({
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        variants={fadeIn("up", "tween", 0, 0.3)} // Adjust direction, type, delay, and duration for desired effect
+        variants={fadeIn("up", "tween", 0, 0.5)} // Adjust direction, type, delay, and duration for desired effect
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}

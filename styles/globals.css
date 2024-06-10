@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @layer utilities {
   .gradient-02 {
     position: absolute;

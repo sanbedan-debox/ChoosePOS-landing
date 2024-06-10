@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { createPortal } from "react-dom";
+import useStore from "@/store/store";
 
 interface ToastProps {
   message: string;
@@ -65,10 +66,11 @@ export const Toast: FC<ToastProps> = ({ message, type }) => {
   };
 
   const { container, icon, iconPath } = getTypeStyles();
+  const { setToast } = useStore();
 
   return createPortal(
     <div
-      className={` fixed bottom-4 right-4 flex items-center w-full max-w-xs p-4 mb-4 rounded-lg shadow ${container}`}
+      className={`fixed bottom-4 right-4 flex items-center w-full max-w-xs p-4 mb-4 rounded-lg shadow ${container}`}
       role="alert"
       style={{ zIndex: 1000 }}
     >
@@ -90,7 +92,7 @@ export const Toast: FC<ToastProps> = ({ message, type }) => {
         type="button"
         className="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
         aria-label="Close"
-        onClick={() => console.log("Toast dismissed")}
+        onClick={() => setToast(null)}
       >
         <span className="sr-only">Close</span>
         <svg
