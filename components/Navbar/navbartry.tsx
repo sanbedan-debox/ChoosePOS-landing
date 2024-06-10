@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           {/* Buttons */}
           <div className="flex items-center gap-6">
             <div className="hidden lg:flex lg:gap-10 items-center">
-              <Modalbtn text={"Sign Up"} emailp="" />
+              <Modalbtn text={"Sign Up"} />
             </div>
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
