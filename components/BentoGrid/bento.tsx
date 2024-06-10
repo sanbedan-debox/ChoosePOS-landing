@@ -1,3 +1,4 @@
+import { blurHashToDataURL } from "@/utils/blurhash";
 import { cn } from "@/utils/cn";
 import { fadeIn } from "@/utils/motion";
 import { domAnimation, LazyMotion, m } from "framer-motion";
@@ -33,6 +34,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  blurredURL,
 }: {
   className?: string;
   id: number;
@@ -42,6 +44,7 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  blurredURL?: string;
 }) => {
   const router = useRouter();
 
@@ -69,9 +72,11 @@ export const BentoGridItem = ({
             {img && (
               <Image
                 fill
+                placeholder="blur"
                 src={img}
                 alt={img}
                 className={cn(imgClassName, "object-cover object-center")}
+                blurDataURL={blurHashToDataURL(blurredURL)}
               />
             )}
             {id !== 6 ? (

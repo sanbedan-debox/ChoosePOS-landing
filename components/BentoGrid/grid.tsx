@@ -1,6 +1,4 @@
-import { fadeIn } from "@/utils/motion";
 import { BentoGrid, BentoGridItem } from "./bento";
-import { domAnimation, LazyMotion } from "framer-motion";
 
 const Grid = () => {
   const gridFeatItems = [
@@ -14,6 +12,7 @@ const Grid = () => {
       titleClassName: "justify-center md:justify-end text-center md:text-left ",
       img: "/features/cutting-edge.webp",
       spareImg: "",
+      blurredURL: "LMF}Zdo#0Lxa}8oLF3xa01WV-:Rk",
     },
     {
       id: 2,
@@ -26,6 +25,7 @@ const Grid = () => {
       img: "/features/delivery.webp",
       // img: "/party.jpg",
       spareImg: "",
+      blurredURL: "LfKAm0xuJ6rr~Vs:M{t7XSRP#-o}",
     },
     {
       id: 3,
@@ -39,6 +39,7 @@ const Grid = () => {
       // img: "/grid.svg",
       img: "/features/data-insights.webp",
       spareImg: "",
+      blurredURL: "LeKnMA%1Mwo}_N%MjF%2aLs;x^M{",
     },
     {
       id: 4,
@@ -52,6 +53,7 @@ const Grid = () => {
       // img: "/disputes.jpg",
       // img: "/grid.svg",
       img: "/features/disputes.webp",
+      blurredURL: "LXI}#7j[ayMx_Nt6WWM{IUxus:oz",
     },
 
     {
@@ -67,6 +69,7 @@ const Grid = () => {
       // img: "/reports.webp",
       img: "/features/reports.webp",
       spareImg: "",
+      blurredURL: "LXI}#7j[ayMx_Nt6WWM{IUxus:oz",
     },
     {
       id: 6,
@@ -77,6 +80,7 @@ const Grid = () => {
       titleClassName: "justify-center md:max-w-full max-w-60 text-center",
       img: "/grid.svg",
       spareImg: "",
+      blurredURL: "LALq96~X4TIB0*tmIUax~mXSkZtk",
     },
   ];
   return (
@@ -104,6 +108,7 @@ const Grid = () => {
             imgClassName={item.imgClassName}
             titleClassName={item.titleClassName}
             spareImg={item.spareImg}
+            blurredURL={item.blurredURL}
           />
         ))}
       </BentoGrid>
