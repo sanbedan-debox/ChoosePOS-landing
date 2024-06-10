@@ -25,6 +25,8 @@ const Home: NextPage = () => {
     }
   }, [isModalOpen]);
 
+  //This are teh OPTIONS ,/1,/2,/3,/4
+
   return (
     <>
       <Header />
