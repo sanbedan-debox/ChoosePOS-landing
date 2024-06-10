@@ -42,7 +42,7 @@ const Navbar: FC = () => {
             {/* <Link href="#enroll">
               <JoinUsButton text="Join the Waitlist" />
             </Link> */}
-            <Modalbtn text={"Enroll Now"} emailp="" />
+            <Modalbtn text={"Enroll Now"} />
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
