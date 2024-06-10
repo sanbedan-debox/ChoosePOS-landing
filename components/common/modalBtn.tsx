@@ -161,7 +161,11 @@ const Modalbtn: FC<ModalbtnProps> = ({ text, emailp }) => {
 
         {isModalOpen && (
           <>
-            <div className="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md z-40"></div>
+            <div
+              className="fixed top-0 w-screen h-screen right-0 bottom-0 left-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md z-10"
+              // onClick={toggleModal}
+              onClick={toggleModal}
+            ></div>
             <m.div
               variants={fadeIn("up", "tween", 0, 0.2)} // Adjust direction, type, delay, and duration for desired effect
               initial="hidden"
@@ -170,7 +174,7 @@ const Modalbtn: FC<ModalbtnProps> = ({ text, emailp }) => {
               id="crud-modal"
               tabIndex={-1}
               aria-hidden="true"
-              className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full "
+              className="fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center w-full h-full "
             >
               <div className="relative p-4 w-full max-w-5xl max-h-full">
                 <div
