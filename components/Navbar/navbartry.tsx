@@ -111,7 +111,7 @@ const Header: React.FC = () => {
                               close();
                             }}
                           >
-                            <Modalbtn text={"Join Us"} emailp="" />
+                            <Modalbtn text={"Join Us"} />
                           </div>
                         </Popover.Panel>
                       </>
