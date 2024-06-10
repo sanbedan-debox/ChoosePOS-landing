@@ -1,5 +1,3 @@
-export { default as Navbar } from "@/components/Navbar/navbar";
-export { default as Header } from "@/components/Hero/Hero2";
 export { default as SecFooter } from "@/components/SecFooter/index";
 export { default as Footertwo } from "@/components/Footer/Footer";
 export { default as FeaturesBento } from "@/components/BentoGrid/grid";
@@ -7,4 +5,3 @@ export { default as Hero } from "@/components/Hero/Hero";
 export { default as TitleComponent1 } from "@/components/common/TitleComponentOpt1";
 export { default as Grid } from "@/components/BentoGrid/grid";
 export { default as CardHoverEffectDemo } from "@/components/Features/featbox";
-export { default as FAQnew } from "@/components/Faq/new";

@@ -1,83 +1,130 @@
-import { Menu, X } from "lucide-react";
-import { useState, FC } from "react";
-import logo1 from "../../assets/logo/logoWhite.png";
-import { navItems } from "../../utils/constant";
-import Image from "next/image";
+"use client";
+import React, { useEffect, useState } from "react";
+import { Popover } from "@headlessui/react";
+import { TbMenu2 } from "react-icons/tb";
+import { IoIosArrowUp } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import NavLinks from "./NavLinks";
+import Container from "./Container";
+import Image from "next/image";
+import logo1 from "../../assets/logo/logoWhite.png";
 import Modalbtn from "../common/modalBtn";
+import { navData } from "@/utils/constant";
 
-interface NavItem {
-  href: string;
-  label: string;
-}
+const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const Navbar: FC = () => {
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setMobileDrawerOpen(!mobileDrawerOpen);
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    setIsScrolled(scrollY > 50);
   };
 
-  const closeDrawer = () => {
-    setMobileDrawerOpen(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      // Clean up the scroll event listener when the component unmounts
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
+  const handleLinkClick = () => {
+    // Function to handle link click, used to close the popover
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-xl border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative lg:text-sm">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center flex-shrink-0">
-            <Link onClick={closeDrawer} href="/">
+    <header className="sticky top-0 z-30 py-3 backdrop-blur-xl border-b border-neutral-700/80">
+      <nav>
+        <Container className="relative z-50 flex justify-between px-4">
+          {/* Logo */}
+          <div className="relative z-10 flex items-center gap-16">
+            <Link href="/">
               <Image className="mr-2" src={logo1} alt="Logo" width={150} />
             </Link>
           </div>
-          <ul className="hidden lg:flex ml-14 text-lg space-x-12">
-            {navItems.map((item: NavItem, index: number) => (
-              <li key={index}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-          <div className="hidden lg:flex justify-center space-x-12 items-center">
-            {/* <Link href="#enroll">
-              <JoinUsButton text="Join the Waitlist" />
-            </Link> */}
-            <Modalbtn text={"Enroll Now"} />
+          {/* NavLinks */}
+          <div className="hidden lg:flex lg:gap-10 items-center">
+            <NavLinks />
           </div>
-          <div className="lg:hidden md:flex flex-col justify-end">
-            <button onClick={toggleNavbar}>
-              {mobileDrawerOpen ? <X /> : <Menu />}
-            </button>
+          {/* Buttons */}
+          <div className="flex items-center gap-6">
+            <div className="hidden lg:flex lg:gap-10 items-center">
+              <Modalbtn text={"Sign Up"} />
+            </div>
+            {/* Mobile NavLinks */}
+            <Popover className="lg:hidden">
+              {({ open, close }) => (
+                <>
+                  <Popover.Button
+                    className="relative z-10 -m-2    inline-flex items-center rounded-lg stroke-gray-900  hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none outline-none"
+                    aria-label="Toggle site navigation"
+                  >
+                    {open ? (
+                      <IoIosArrowUp className="text-2xl" />
+                    ) : (
+                      <TbMenu2 className="text-2xl" />
+                    )}
+                  </Popover.Button>
+                  <AnimatePresence initial={false}>
+                    {open && (
+                      <>
+                        <Popover.Overlay
+                          static
+                          as={motion.div}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="fixed inset-0 z-0 bg-black backdrop-blur h-lvh"
+                        />
+                        <Popover.Panel
+                          static
+                          as={motion.div}
+                          initial={{ opacity: 0, y: -32 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{
+                            opacity: 0,
+                            y: -32,
+                            transition: { duration: 0.2 },
+                          }}
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-black px-6 pb-6 pt-12 shadow-2xl shadow-gray-900/20"
+                        >
+                          <div className="space-y-4">
+                            {navData.map(({ _id, title, href }) => (
+                              <Link
+                                className="block text-base leading-7 tracking-tight text-white"
+                                href={href}
+                                key={_id}
+                                onClick={() => {
+                                  handleLinkClick();
+                                  close();
+                                }}
+                              >
+                                {title}
+                              </Link>
+                            ))}
+                          </div>
+                          <div
+                            className="mt-4 flex flex-col items-center"
+                            onClick={() => {
+                              handleLinkClick();
+                              close();
+                            }}
+                          >
+                            <Modalbtn text={"Join Us"} />
+                          </div>
+                        </Popover.Panel>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Popover>
           </div>
-        </div>
-        {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 top-12 bg-black  w-full px-2 py-1 h-svh flex flex-col text-right items-end lg:hidden">
-            <ul className="mt-5">
-              {navItems.map((item: NavItem, index: number) => (
-                <li
-                  key={index}
-                  className="text-xl hover:text-neutral-400 px-4 py-1 list-item-with-bullet"
-                >
-                  <Link href={item.href} onClick={closeDrawer}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              <li className="text-xl hover:text-neutral-400 px-4 py-1 list-item-with-bullet">
-                <Link
-                  href="#enroll"
-                  className="text-white"
-                  onClick={closeDrawer}
-                >
-                  Enroll Now
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
-    </nav>
+        </Container>
+      </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

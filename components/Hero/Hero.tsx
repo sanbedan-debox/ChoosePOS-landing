@@ -3,7 +3,6 @@
 import { FC } from "react";
 import EnrollInput from "../common/enrollInput";
 import Typewriter from "./typeWritterEffect";
-import Modalbtn from "../common/modalBtn";
 const words = ["Data Insights", "Technology", "Marketing"];
 
 const Hero: FC = () => {

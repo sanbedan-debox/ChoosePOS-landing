@@ -6,11 +6,10 @@ import {
   Footertwo,
   Grid,
   Hero,
-  Navbar,
   SecFooter,
   TitleComponent1,
 } from "@/components";
-import Header from "@/components/Navbar/navbartry";
+import Header from "@/components/Navbar/navbar";
 import ModalPopUp from "@/components/common/enrollModal";
 import useStore from "@/store/store";
 import { Toast } from "@/components/common/Toast";
@@ -28,7 +27,6 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      {/* <Navbar /> */}
       <Hero />
       <TitleComponent1 />
       <div className="gradient-02 absolute w-full h-[200px] top-0 right-0 z-[-1]"></div>
