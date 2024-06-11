@@ -1,4 +1,6 @@
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import { BentoGrid, BentoGridItem } from "./bento";
+import { fadeIn } from "@/utils/motion";
 
 const Grid = () => {
   const gridFeatItems = [
@@ -84,35 +86,45 @@ const Grid = () => {
     },
   ];
   return (
-    <section
-      id="feat"
-      className="mx-auto px-4  lg:flex  flex-col items-center overflow-hidden mb-12  md:mb-24"
-    >
-      <div className="text-center z-20">
-        <h2 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0  md:justify-center font-semibold">
-          Our{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-            Features
-          </span>
-        </h2>
-      </div>
-      <BentoGrid className="w-full py-8 md:py-20">
-        {gridFeatItems.map((item, i) => (
-          <BentoGridItem
-            id={item.id}
-            key={i}
-            title={item.title}
-            description={item.description}
-            className={item.className}
-            img={item.img}
-            imgClassName={item.imgClassName}
-            titleClassName={item.titleClassName}
-            spareImg={item.spareImg}
-            blurredURL={item.blurredURL}
-          />
-        ))}
-      </BentoGrid>
-    </section>
+    <LazyMotion features={domAnimation}>
+      <section
+        id="feat"
+        className="mx-auto px-4  lg:flex  flex-col items-center overflow-hidden mb-12  md:mb-24"
+      >
+        <div className="text-center z-20">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl lg:text-5xl  md:mt-0  md:justify-center font-semibold">
+            Our{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              Features
+            </span>
+          </h2>
+        </div>
+
+        <m.div
+          variants={fadeIn("up", "tween", 0, 0.5)} // Adjust direction, type, delay, and duration for desired effect
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          <BentoGrid className="w-full py-8 md:py-20">
+            {gridFeatItems.map((item, i) => (
+              <BentoGridItem
+                id={item.id}
+                key={i}
+                title={item.title}
+                description={item.description}
+                className={item.className}
+                img={item.img}
+                imgClassName={item.imgClassName}
+                titleClassName={item.titleClassName}
+                spareImg={item.spareImg}
+                blurredURL={item.blurredURL}
+              />
+            ))}
+          </BentoGrid>
+        </m.div>
+      </section>
+    </LazyMotion>
   );
 };
 

@@ -5,17 +5,17 @@ import {
   CardHoverEffectDemo,
   Footertwo,
   Grid,
+  Header,
   Hero,
   SecFooter,
   TitleComponent1,
 } from "@/components";
-import Header from "@/components/Navbar/navbar";
 import ModalPopUp from "@/components/common/enrollModal";
 import useStore from "@/store/store";
 import { Toast } from "@/components/common/Toast";
 
 const Home: NextPage = () => {
-  const { isModalOpen, toggleModal, toast } = useStore();
+  const { isModalOpen, toast } = useStore();
   useEffect(() => {
     if (isModalOpen) {
       document.body.classList.add("no-scroll");
@@ -51,9 +51,7 @@ const Home: NextPage = () => {
         <div className="border-t py-2 mt-2 border-neutral-700"></div>
         <Footertwo />
       </div>
-
-      <div></div>
-      {isModalOpen && <ModalPopUp />}
+      <ModalPopUp />
       {toast && <Toast message={toast.message} type={toast.type} />}
     </>
   );
