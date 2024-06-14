@@ -1,0 +1,3 @@
+mutation AddWaitListUsers($input:AddWaitListUserInput!){
+  addWaitListUser(input:$input)
+}

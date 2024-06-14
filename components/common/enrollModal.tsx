@@ -6,52 +6,41 @@ import group4 from "../../assets/jpg/group4.webp";
 import useStore from "@/store/store";
 import Select from "react-select";
 import { SingleValue } from "react-select";
+import { sdk } from "@/utils/graphqlClient";
+import { SoftWareEnum, WaitListUser } from "@/generated/graphql";
 
 const ModalPopUp: FC = () => {
-  const { isModalOpen, toggleModal, emailp, setToast } = useStore();
+
+  const { isModalOpen, toggleModal, emailp, setToast, setEmailp } = useStore();
+
   const options = [
-    { value: "software1", label: "software1" },
-    { value: "software2", label: "software2" },
-    { value: "software3", label: "software3" },
+    { value: SoftWareEnum.Software1, label: "software1" },
+    { value: SoftWareEnum.Software2, label: "software2" },
+    { value: SoftWareEnum.Software3, label: "software3" },
   ];
+
   const [loading, setLoading] = useState(false);
 
-  // Initial form data setup
-  const [formData, setFormData] = useState({
+  const [waitListUser, setWaitListUser] = useState<WaitListUser>({
     name: "",
     email: emailp,
     website: "",
-    software: "None",
-    phoneNumber: "",
-  });
+    software: SoftWareEnum.None,
+    number: "",
+  })
+
+  const [software, setSoftware] =
+  useState<SingleValue<{ value: string; label: string }>>();
 
   useEffect(() => {
     if (isModalOpen) {
-      setFormData((prevFormData) => ({
+      setWaitListUser((prevFormData) => ({
         ...prevFormData,
         email: emailp,
       }));
     }
   }, [isModalOpen, emailp]);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSelectChange = (
-    selectedOption: SingleValue<{ value: string; label: string }>
-  ) => {
-    setFormData({
-      ...formData,
-      software: selectedOption ? selectedOption.value : "None",
-    });
-  };
 
   const isValidUrl = (urlString: string): boolean => {
     try {
@@ -76,98 +65,86 @@ const ModalPopUp: FC = () => {
   };
   // className="appearance-none bg-secondary bg-opacity-30 border border-gray-500 text-sm rounded-lg focus:ring-primary-500 focus:outline-none focus:border-transparent block w-full pl-3 pr-10 py-2.5 text-neutral-400 placeholder-neutral-400 focus:bg-black transition duration-150 ease-in-out"
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!formData.name.trim()) {
-      setToast({ message: "Please enter your name", type: "error" });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-    if (!formData.email.trim()) {
-      setToast({ message: "Please enter your email", type: "error" });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-    if (!isValidEmail(formData.email.trim())) {
-      setToast({
-        message: "Please enter a valid email address",
-        type: "error",
-      });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-    if (formData.website.trim()) {
-      formData.website = getClickableLink(formData.website.trim());
-    }
-    if (formData.website.trim() && !isValidUrl(formData.website.trim())) {
-      setToast({ message: "Please enter a valid website URL", type: "error" });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-    if (!formData.phoneNumber.trim()) {
-      setToast({ message: "Please enter your phone number", type: "error" });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-    const phoneNumberPattern = /^\d{10}$/;
-    if (!phoneNumberPattern.test(formData.phoneNumber.trim())) {
-      setToast({
-        message: "Please enter a valid 10-digit phone number",
-        type: "error",
-      });
-      setTimeout(() => {
-        setToast(null);
-      }, 2000);
-      return;
-    }
-
-    setLoading(true);
+  const handleCreateWaitListUser = async () => {
     try {
-      const response = await fetch("/api/registerUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
 
-      if (response.ok) {
+      if (!waitListUser.name || !waitListUser.email || !waitListUser.number) {
+        setToast({ message: "Please fill all the fields", type: "error" });
+        setTimeout(() => {
+          setToast(null);
+        }, 2000);
+        return;
+      }
+
+      if (!isValidEmail(waitListUser.email.trim())) {
+        setToast({
+          message: "Please enter a valid email address",
+          type: "error",
+        });
+        setTimeout(() => {
+          setToast(null);
+        }, 2000);
+        return;
+      }
+
+      if (waitListUser.website.trim()) {
+        waitListUser.website = getClickableLink(waitListUser.website.trim());
+      }
+
+      if (!isValidUrl(waitListUser.website.trim())) {
+        setToast({ message: "Please enter a valid website URL", type: "error" });
+        setTimeout(() => {
+          setToast(null);
+        }, 2000);
+        return;
+      }
+
+      if (waitListUser.website.trim()) {
+        waitListUser.website = getClickableLink(waitListUser.website.trim());
+      }
+      if (waitListUser.website.trim() && !isValidUrl(waitListUser.website.trim())) {
+        setToast({ message: "Please enter a valid website URL", type: "error" });
+        setTimeout(() => {
+          setToast(null);
+        }, 2000);
+        return;
+      }
+      setLoading(true)
+      const response = await sdk.AddWaitListUsers({
+        input: {
+          email: waitListUser.email.trim(),
+          name: waitListUser.name.trim(),
+          number: waitListUser.number.trim(),
+          software: waitListUser.software,
+          website: waitListUser.website,
+        }
+      })
+      console.log(response)
+      setLoading(false)
+
+      if (response) {
         setToast({
           message: "We Successfully Received your Request",
           type: "success",
         });
         toggleModal();
-        setFormData({
+        setWaitListUser({
           name: "",
           email: "",
           website: "",
-          software: "None",
-          phoneNumber: "",
+          software: SoftWareEnum.None,
+          number: "",
         });
-      } else {
-        setToast({ message: "Failed to send email", type: "error" });
+        setEmailp("")
       }
-    } catch (error) {
-      console.error("Error:", error);
-      setToast({ message: "Failed to send email", type: "error" });
-    } finally {
-      setLoading(false);
-      setTimeout(() => {
-        setToast(null);
-      }, 3000);
+      return
+      
+    } catch (error:any) {
+      setToast({ message: error.response.errors[0].message.split(":")[1], type: "error" });
+      setLoading(false)
+      return
     }
-  };
+  }
 
   return (
     <AnimatePresence>
@@ -215,7 +192,7 @@ const ModalPopUp: FC = () => {
                     </div>
                   </div>
 
-                  <form className="px-4 w-full" onSubmit={handleSubmit}>
+                  <form className="px-4 w-full">
                     <div className="flex items-start justify-between p-4 py-2 rounded-t dark:border-gray-600">
                       <div className="flex items-center space-x-4"></div>
                       <button
@@ -253,8 +230,13 @@ const ModalPopUp: FC = () => {
                           type="text"
                           name="name"
                           id="name"
-                          value={formData.name}
-                          onChange={handleChange}
+                          value={waitListUser.name}
+                          onChange={(e) => {
+                            setWaitListUser((pre) => ({
+                              ...pre,
+                              name: e.target.value,
+                            }))
+                          }}
                           className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
                           placeholder="Enter your name"
                         />
@@ -269,8 +251,13 @@ const ModalPopUp: FC = () => {
                         <input
                           name="email"
                           id="email"
-                          value={formData.email}
-                          onChange={handleChange}
+                          value={waitListUser.email}
+                          onChange={(e) => {
+                            setWaitListUser((pre) => ({
+                              ...pre,
+                              email: e.target.value,
+                            }))
+                          }}
                           className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
                           placeholder="Enter your email"
                         />
@@ -286,8 +273,13 @@ const ModalPopUp: FC = () => {
                           type="text"
                           name="website"
                           id="website"
-                          value={formData.website}
-                          onChange={handleChange}
+                          value={waitListUser.website}
+                          onChange={(e) => {
+                            setWaitListUser((pre) => ({
+                              ...pre,
+                              website: e.target.value,
+                            }))
+                          }}
                           className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
                           placeholder="Enter your website URL"
                         />
@@ -313,10 +305,19 @@ const ModalPopUp: FC = () => {
                             }}
                             // styles={reactSelectColorStyles}
                             options={options}
-                            value={options.find(
-                              (option) => option.value === formData.software
-                            )}
-                            onChange={handleSelectChange}
+                            value={software}
+                            onChange={(
+                              value: SingleValue<{
+                                value: string;
+                                label: string;
+                              }>
+                            ) => {
+                              setSoftware(value)
+                              setWaitListUser((pre) => ({
+                                ...pre,
+                                software: value?.value as SoftWareEnum
+                              }))
+                            }}
                           />
                         </div>
                       </div>
@@ -332,11 +333,16 @@ const ModalPopUp: FC = () => {
                             +1
                           </span>
                           <input
-                            type="text"
+                            type="number"
                             name="phoneNumber"
                             id="phoneNumber"
-                            value={formData.phoneNumber}
-                            onChange={handleChange}
+                            value={waitListUser.number}
+                            onChange={((e) => {
+                              setWaitListUser((pre) => ({
+                                ...pre,
+                                number:e.target.value
+                              }))
+                            })}
                             className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-r-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
                             placeholder="Enter your phone number"
                           />
@@ -349,7 +355,8 @@ const ModalPopUp: FC = () => {
                         loading
                           ? "bg-gray-400"
                           : "bg-primary hover:bg-white hover:text-primary"
-                      }`}
+                        }`}
+                      onClick={handleCreateWaitListUser}
                       disabled={loading}
                     >
                       {loading ? (
