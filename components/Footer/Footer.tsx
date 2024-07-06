@@ -7,7 +7,7 @@ const Footertwo = () => {
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
             <Link
-              href="#"
+              href="#feat"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               Features

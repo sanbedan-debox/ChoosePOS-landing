@@ -1,8 +1,10 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import { DefaultSeo } from "next-seo";
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
 import "../styles/globals.css";
 
 const geologica = localFont({ src: "../public/fonts/geologica.ttf" });
@@ -33,9 +35,21 @@ const seo = {
   },
 };
 
+if (typeof window !== "undefined") {
+  // checks that we are client-side
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "", {
+    api_host:
+      process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
+    person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === "development") posthog.debug(); // debug mode in development
+    },
+  });
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <PostHogProvider client={posthog}>
       <NextNProgress color="#162CF1" />
       <Head>
         <link rel="shortcut icon" href="/LogoWhite.ico" />
@@ -49,7 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className={geologica.className}>
         <Component {...pageProps} />
       </main>
-    </>
+    </PostHogProvider>
   );
 }
 

@@ -57,7 +57,7 @@ export const HoverEffect = () => {
             >
               <div className="bg-dot-white/[0.15] z-25 h-full w-full absolute"></div>
               <div className="flex flex-col md:flex-row items-start p-4">
-                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 text-white flex justify-center items-center rounded-full bg-gradient-to-r from-primary to-secondary mb-2 md:mb-0">
+                <div className="flex-shrink-0 p-2 w-8 h-8 md:w-10 md:h-10 text-white flex justify-center items-center rounded-full bg-gradient-to-r from-primary to-secondary mb-2 md:mb-0">
                   {item.icon}
                 </div>
                 <div className="ml-0 md:ml-4">

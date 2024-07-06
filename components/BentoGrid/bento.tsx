@@ -58,6 +58,11 @@ export const BentoGridItem = ({
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
+      onClick={() => {
+        if (id === 6) {
+          router.push("#enroll");
+        }
+      }}
     >
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -85,8 +90,8 @@ export const BentoGridItem = ({
           )}
           {id !== 6 ? (
             <div
-              className="h-full w-full absolute"
-              style={{ backgroundColor: "rgba(0,0,0,0.35)" }}
+              className="h-full w-full absolute bg-black bg-opacity-45 md:bg-opacity-35"
+              // style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
             />
           ) : null}
         </div>
@@ -96,12 +101,14 @@ export const BentoGridItem = ({
           } `}
         >
           {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              //   width={220}
-              className="object-cover object-center w-full h-full"
-            />
+            <div className="w-full h-full relative">
+              <Image
+                src={spareImg}
+                alt={spareImg}
+                fill
+                className="object-cover object-center"
+              />
+            </div>
           )}
         </div>
 
@@ -110,11 +117,6 @@ export const BentoGridItem = ({
             titleClassName,
             " group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
-          onClick={() => {
-            if (id === 6) {
-              router.push("#enroll");
-            }
-          }}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
 

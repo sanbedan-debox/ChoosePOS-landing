@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.choosepos.com
+
+# Sitemaps
+Sitemap: https://www.choosepos.com/sitemap.xml

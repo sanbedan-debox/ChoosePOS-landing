@@ -6,13 +6,16 @@ import group4 from "../../assets/jpg/group4.webp";
 import useStore from "@/store/store";
 import Select from "react-select";
 import { SingleValue } from "react-select";
+import { SoftWareEnum } from "@/generated/graphql";
+import { sdk } from "@/utils/graphqlClient";
 
 const ModalPopUp: FC = () => {
   const { isModalOpen, toggleModal, emailp, setToast } = useStore();
   const options = [
-    { value: "software1", label: "software1" },
-    { value: "software2", label: "software2" },
-    { value: "software3", label: "software3" },
+    { label: SoftWareEnum.Clover, value: SoftWareEnum.Clover },
+    { label: SoftWareEnum.Square, value: SoftWareEnum.Square },
+    { label: SoftWareEnum.Toast, value: SoftWareEnum.Toast },
+    { label: SoftWareEnum.None, value: SoftWareEnum.None },
   ];
   const [loading, setLoading] = useState(false);
 
@@ -20,8 +23,9 @@ const ModalPopUp: FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: emailp,
+    restaurantName: "",
     website: "",
-    software: "None",
+    software: "",
     phoneNumber: "",
   });
 
@@ -86,6 +90,13 @@ const ModalPopUp: FC = () => {
       }, 2000);
       return;
     }
+    if (!formData.restaurantName.trim()) {
+      setToast({ message: "Please enter your restaurant name", type: "error" });
+      setTimeout(() => {
+        setToast(null);
+      }, 2000);
+      return;
+    }
     if (!formData.email.trim()) {
       setToast({ message: "Please enter your email", type: "error" });
       setTimeout(() => {
@@ -103,10 +114,10 @@ const ModalPopUp: FC = () => {
       }, 2000);
       return;
     }
-    if (formData.website.trim()) {
-      formData.website = getClickableLink(formData.website.trim());
-    }
-    if (formData.website.trim() && !isValidUrl(formData.website.trim())) {
+    if (
+      formData.website.trim() &&
+      !isValidUrl(getClickableLink(formData.website.trim()))
+    ) {
       setToast({ message: "Please enter a valid website URL", type: "error" });
       setTimeout(() => {
         setToast(null);
@@ -134,34 +145,44 @@ const ModalPopUp: FC = () => {
 
     setLoading(true);
     try {
-      const response = await fetch("/api/registerUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const softwareValue = formData.software as SoftWareEnum;
+      const response = await sdk.AddWaitlistUser({
+        input: {
+          email: formData.email,
+          name: formData.name,
+          restaurantName: formData.restaurantName,
+          number: formData.phoneNumber,
+          software: softwareValue,
+          website: formData.website,
         },
-        body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
+      if (!response.addWaitListUser) {
         setToast({
-          message: "We Successfully Received your Request",
-          type: "success",
-        });
-        toggleModal();
-        setFormData({
-          name: "",
-          email: "",
-          website: "",
-          software: "None",
-          phoneNumber: "",
+          message: "Something went wrong, please try again later!",
+          type: "error",
         });
       } else {
-        setToast({ message: "Failed to send email", type: "error" });
+        setToast({
+          message: "Congratulations, we've received your details!",
+          type: "success",
+        });
       }
+      toggleModal();
     } catch (error) {
       console.error("Error:", error);
-      setToast({ message: "Failed to send email", type: "error" });
+      setToast({
+        message: "Something went wrong, please try again later",
+        type: "error",
+      });
     } finally {
+      setFormData({
+        email: "",
+        name: "",
+        phoneNumber: "",
+        restaurantName: "",
+        software: "",
+        website: "",
+      });
       setLoading(false);
       setTimeout(() => {
         setToast(null);
@@ -257,6 +278,23 @@ const ModalPopUp: FC = () => {
                           onChange={handleChange}
                           className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
                           placeholder="Enter your name"
+                        />
+                      </div>
+                      <div className="col-span-2">
+                        <label
+                          htmlFor="restaurantName"
+                          className="block mb-2 text-sm font-medium text-white"
+                        >
+                          Restaurant Name
+                        </label>
+                        <input
+                          type="text"
+                          name="restaurantName"
+                          id="restaurantName"
+                          value={formData.restaurantName}
+                          onChange={handleChange}
+                          className="bg-secondary bg-opacity-30 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:outline-none focus:border-transparent block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-transparent"
+                          placeholder="Enter your restaurant name"
                         />
                       </div>
                       <div className="col-span-2">
