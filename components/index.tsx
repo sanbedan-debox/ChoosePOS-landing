@@ -6,3 +6,4 @@ export { default as TitleComponent1 } from "@/components/common/TitleComponent";
 export { default as Grid } from "@/components/BentoGrid/grid";
 export { default as CardHoverEffectDemo } from "@/components/Features/featbox";
 export { default as Header } from "@/components/Navbar/navbar";
+export {default as WhyChoose} from "@/components/AboutUs/WhyChoose";

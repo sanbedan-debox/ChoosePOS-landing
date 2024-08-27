@@ -7,10 +7,10 @@ const Footertwo = () => {
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
             <Link
-              href="#feat"
+              href="/"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
-              Features
+              Home
             </Link>
           </div>
           {/* <div className="px-5 py-2">
@@ -23,7 +23,7 @@ const Footertwo = () => {
           </div> */}
           <div className="px-5 py-2">
             <Link
-              href="#"
+              href="/about-us"
               className="text-base leading-6 text-white hover:text-gray-400"
             >
               About Us

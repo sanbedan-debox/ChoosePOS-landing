@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             </div>
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
-              {({ open, close }) => (
+              {({ open, close }: any) => (
                 <>
                   <Popover.Button
                     className="relative z-10 -m-2    inline-flex items-center rounded-lg stroke-gray-900  hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none outline-none"

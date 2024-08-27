@@ -54,6 +54,6 @@ export const features: Feature[] = [
 ];
 
 export const navData = [
-  { _id: 102, title: "Features", href: "#feat" },
-  { _id: 101, title: "About Us", href: "/" },
+  { _id: 102, title: "Home", href: "/" },
+  { _id: 101, title: "About Us", href: "/about-us" },
 ];
